@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "claude-session",
+  "title": "Claude Session",
+  "description": "A complete Claude Code screen: header, a full turn (plan, tool calls, diff, approval, working line) and the input composer.",
+  "registryDependencies": [
+    "claude-header",
+    "claude-message",
+    "claude-todo-list",
+    "claude-tool-call",
+    "claude-diff",
+    "claude-permission",
+    "claude-thinking",
+    "claude-prompt"
+  ],
+  "files": [
+    {
+      "path": "registry/brainless/blocks/claude-session.tsx",
+      "content": "import { ClaudeHeader } from \"@/registry/brainless/claude/claude-header\";\nimport { ClaudeMessage } from \"@/registry/brainless/claude/claude-message\";\nimport { ClaudeTodoList } from \"@/registry/brainless/claude/claude-todo-list\";\nimport { ClaudeToolCall } from \"@/registry/brainless/claude/claude-tool-call\";\nimport { ClaudeDiff } from \"@/registry/brainless/claude/claude-diff\";\nimport { ClaudePermission } from \"@/registry/brainless/claude/claude-permission\";\nimport { ClaudeThinking } from \"@/registry/brainless/claude/claude-thinking\";\nimport { ClaudePrompt } from \"@/registry/brainless/claude/claude-prompt\";\n\n/**\n * ClaudeSession — a complete Claude Code screen: welcome header, a full turn\n * (prompt → plan → tool calls → diff → approval → working line) and the pinned\n * input composer. Everything a Claude Code session shows, as one block.\n */\nexport function ClaudeSession() {\n  return (\n    <div className=\"space-y-3 font-mono text-[13px] leading-[1.6] text-[#c0caf5]\">\n      <ClaudeHeader cwd=\"~/dev/acme-app\" />\n\n      <div style={{ color: \"#e0af68\" }}>\n        <span aria-hidden>⚠ </span>3 MCP servers need authentication · run /mcp\n      </div>\n\n      <div className=\"space-y-3 pt-1\">\n        <ClaudeMessage role=\"user\">\n          add a dark-mode toggle to the settings page and run the tests\n        </ClaudeMessage>\n\n        <ClaudeMessage>\n          I&apos;ll add the toggle, wire it into the theme provider, then run the\n          suite.\n        </ClaudeMessage>\n\n        <ClaudeTodoList\n          todos={[\n            { label: \"Read the settings page\", status: \"done\" },\n            { label: \"Add the dark-mode toggle\", status: \"active\" },\n            { label: \"Run the test suite\", status: \"todo\" },\n          ]}\n        />\n\n        <ClaudeToolCall tool=\"Read\" arg=\"app/settings/page.tsx\" result=\"Read 48 lines\" />\n\n        <ClaudeDiff\n          file=\"app/settings/page.tsx\"\n          summary=\"Updated app/settings/page.tsx with 3 additions and 1 removal\"\n          lines={[\n            { type: \"ctx\", n: 11, text: \"export function Settings() {\" },\n            { type: \"del\", n: 12, text: \"  return <Panel>{sections}</Panel>\" },\n            { type: \"add\", n: 12, text: \"  return (\" },\n            { type: \"add\", n: 13, text: \"    <Panel header={<ThemeToggle />}>\" },\n            { type: \"add\", n: 14, text: \"      {sections}\" },\n            { type: \"ctx\", n: 15, text: \"    </Panel>\" },\n          ]}\n        />\n\n        <ClaudeToolCall\n          tool=\"Bash\"\n          arg=\"bun test\"\n          result=\"12 passed, 0 failed in 1.4s\"\n        >\n          {`bun test v1.2.21\n✓ settings > renders the theme toggle\n✓ theme > persists across reloads\n 12 pass\n 0 fail`}\n        </ClaudeToolCall>\n\n        <ClaudePermission\n          title=\"Bash command\"\n          command=\"git commit -am 'Add dark-mode toggle'\"\n          question=\"Do you want to proceed?\"\n        />\n\n        <ClaudeThinking />\n      </div>\n\n      <div className=\"pt-2\">\n        <ClaudePrompt />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/brainless/blocks/claude-session.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

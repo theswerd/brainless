@@ -1,36 +1,76 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# brainless
 
-## Getting Started
+Claude Code, Codex, and Grok interfaces as [shadcn](https://ui.shadcn.com) components.
 
-First, run the development server:
+**Site:** [brainless.swerdlow.dev](https://brainless.swerdlow.dev)
+
+<p align="center">
+  <img src="docs/screenshots/home.jpg" alt="brainless homepage — Claude Code session" width="100%" />
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/home-codex.jpg" alt="Codex session" width="49%" />
+  <img src="docs/screenshots/home-grok.jpg" alt="Grok session" width="49%" />
+</p>
+
+## What is this?
+
+**brainless** is a shadcn/ui registry of accessible React components that recreate the terminal UIs of coding agents — Claude Code, OpenAI Codex, and Grok — so you can drop them into docs, demos, marketing pages, and product UI without screenshots or iframes.
+
+Components are built for fidelity against real terminal captures, then shipped as copy-pasteable registry items.
+
+## Install
+
+Add a full session block:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+bunx shadcn@latest add https://brainless.swerdlow.dev/r/claude-session.json
+bunx shadcn@latest add https://brainless.swerdlow.dev/r/codex-session.json
+bunx shadcn@latest add https://brainless.swerdlow.dev/r/grok-session.json
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Or install individual pieces from the [components](https://brainless.swerdlow.dev/components) and [blocks](https://brainless.swerdlow.dev/blocks) pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Components
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Family | Pieces |
+| --- | --- |
+| **Claude** | header, message, thinking, tool call, diff, permission, prompt, slash menu, todo list |
+| **Codex** | header, message, working, exec, diff, permissions, prompt, slash menu |
+| **Grok** | status, header, message, thinking, thought, tool, write, turn end, prompt, slash menu, and more |
+| **Blocks** | `claude-session`, `codex-session`, `grok-session`, `grok-session-active` |
 
-## Learn More
+Shared chrome: `terminal` window frame.
 
-To learn more about Next.js, take a look at the following resources:
+<p align="center">
+  <img src="docs/screenshots/components.jpg" alt="Components catalog" width="49%" />
+  <img src="docs/screenshots/blocks.jpg" alt="Blocks catalog" width="49%" />
+</p>
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Repo layout
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+registry/brainless/   # source components (claude / codex / grok / blocks / ui)
+public/r/             # built registry JSON for shadcn add
+references/captures/  # ANSI / HTML / text frames from real CLIs
+tools/capture/        # tmux capture harness
+app/                  # docs site (Next.js)
+docs/screenshots/     # README screenshots
+```
 
-## Deploy on Vercel
+## Capture harness
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Fidelity starts from real terminal output. The capture tools under `tools/capture/` drive agents in tmux, dump frames as ANSI / HTML / text, and land them in `references/captures/` for side-by-side review.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Develop
+
+```bash
+bun install
+bun run dev
+```
+
+Build the registry JSON into `public/r/` as needed for local `shadcn add` testing.
+
+## License
+
+MIT

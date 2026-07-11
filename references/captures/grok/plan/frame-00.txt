@@ -1,0 +1,30 @@
+
+  ╭─ plan.md ─────────────────────────────────────────────────────────────────────────────── [↗] ╮
+  │ 1 Plan: Touch planned.txt                                                                   █│
+  │ 2                                                                                           █│
+  │ 3 Context                                                                                   █│
+  │ 4                                                                                           █│
+  │ 5 Create an empty marker file planned.txt in the workspace root so a planned touch can be   █│
+  │   verified. No other files or changes.                                                      █│
+  │ 6                                                                                           █│
+  │ 7 Steps                                                                                     █│
+  │ 8                                                                                           █│
+  │ 9 1. Create planned.txt — Write (or touch) an empty file at /private/tmp/brainless-capture- █│
+  │   workdir/planned.txt.                                                                      █│
+  │10 2. Verify — Confirm the file exists (e.g. read or ls) and stop.                           █│
+  │11                                                                                           █│
+  │12 Critical files                                                                            █│
+  │13                                                                                            │
+  │14 • planned.txt (new) — workspace root                                                       │
+  │15                                                                                         ▼  │
+  │──────────────────────────────────────────────────────────────────────────────────────────────│ █
+  │                a approve  |  s request changes  |  c comment  |  q quit plan                 │ █
+  ╰──────────────────────────────────────────────────────────────────────────────────────────────╯
+    ◆ Waiting on plan approval
+
+  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ ❯ Build anything                                                                             │
+  ╰─────────────────────────────────────────────────────────── Grok 4.5 (xhigh) · plan approval ─╯
+
+  c:comment  │  a:approve  │  q:quit plan  │  v:select  │  Tab:prompt
+

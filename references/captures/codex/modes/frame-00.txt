@@ -1,0 +1,30 @@
+╭─────────────────────────────────────────────────╮
+│ ✨ Update available! 0.132.0 -> 0.144.1         │
+│ Run npm install -g @openai/codex to update.     │
+│                                                 │
+│ See full release notes:                         │
+│ https://github.com/openai/codex/releases/latest │
+╰─────────────────────────────────────────────────╯
+
+╭───────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.132.0)                        │
+│                                                   │
+│ model:     gpt-5.6-sol low   /model to change     │
+│ directory: /private/tmp/brainless-capture-workdir │
+╰───────────────────────────────────────────────────╯
+
+  Tip: Try the Codex App. Run 'codex app' or visit https://chatgpt.com/codex?app-landing-page=true
+
+⚠ MCP client for `github` failed to start: MCP startup failed: Environment variable GITHUB_PAT_TOKEN
+  for MCP server 'github' is not set
+
+⚠ MCP startup incomplete (failed: github)
+
+
+› Use /skills to list available skills
+
+  gpt-5.6-sol low · /private/tmp/brainless-capture-workdir
+
+
+
+

@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "codex-message",
+  "title": "Codex Message",
+  "description": "A Codex conversation turn — bold › user marker or plain assistant text.",
+  "files": [
+    {
+      "path": "registry/brainless/codex/codex-message.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * CodexMessage — a Codex turn. User prompts show a bold `›` marker (default\n * foreground — not cyan); the assistant reply is plain text.\n */\nexport function CodexMessage({\n  role = \"assistant\",\n  className,\n  children,\n}: {\n  role?: \"user\" | \"assistant\";\n  className?: string;\n  children: React.ReactNode;\n}) {\n  if (role === \"user\") {\n    return (\n      <div\n        className={cn(\n          \"flex gap-2 font-mono text-[13px] leading-[1.6] text-[#ededed]\",\n          className,\n        )}\n      >\n        <span aria-hidden className=\"font-bold\">\n          ›\n        </span>\n        <span className=\"min-w-0\">{children}</span>\n      </div>\n    );\n  }\n  return (\n    <div\n      className={cn(\"font-mono text-[13px] leading-[1.6] text-[#c9c9c9]\", className)}\n    >\n      {children}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/codex/codex-message.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

@@ -1,0 +1,30 @@
+[48;5;0m
+  [2m[38;5;15m main[0m[48;5;0m [38;5;8m/private/tmp/brainless-capture-workdir[39m                                 [38;5;15m16K / 500K[38;5;8m │ [38;5;15m2[38;5;8m/[38;5;15m3 ✓[39m
+
+  [48;5;8m                                                                                                [48;5;0m
+  [48;5;8m   [38;5;8m❯ [38;5;15mOverwrite probe-new.txt with the single word world. Nothing else.[39m               [38;5;7m  4:51 PM[39m  [48;5;0m
+  [48;5;8m                                                                                                [48;5;0m
+
+     [1m[38;5;7m    post_tool_use[0m[48;5;0m
+     [38;5;7m      [38;5;10m✓ [38;5;7mglobal/settings:post_tool_use[0].hooks[0] (9ms)[39m
+     [38;5;7m      [38;5;9m✗ [38;5;7mglobal/settings:post_tool_use[1].hooks[0] (0ms)[39m
+     [38;5;7m          [38;5;9mhook not executed: required env var(s) not set: ${SUPERSET_HOME_DIR}[39m
+     [38;5;7m      [38;5;10m✓ [38;5;7mglobal/orca-status:post_tool_use[0].hooks[0] (10ms)[39m
+
+     [38;5;7m◆ [1mThought[0m[38;5;7m[48;5;0m for 0.0s[39m
+
+     [1m[38;5;8mprobe-new.txt[0m[38;5;15m[48;5;0m now contains:[39m                                                       [38;5;7m  4:51 PM[39m
+
+     [38;5;15mworld[39m
+
+     [38;5;7m◆ [1mstop[0m[38;5;7m[48;5;0m  [hooks: [2m[38;5;10m3[0m[38;5;7m[48;5;0m/[2m[38;5;9m1[0m[38;5;7m[48;5;0m][39m                                                                          [38;5;7m█
+[39m                                                                                                   [38;5;7m█
+[39m     [38;5;7mTurn completed in 2.5s.[39m                                                                       [38;5;7m█
+[39m                                                                                                   [38;5;7m█
+[39m
+  [38;5;15m╭──────────────────────────────────────────────────────────────────────────────────────────────╮[39m
+  [38;5;15m│ ❯                                                                                            │[39m
+  [38;5;15m╰────────────────────────────────────────────────────────── [38;5;7mGrok 4.5 (xhigh)[38;5;8m · [38;5;7malways-approve[38;5;15m ─╯[39m
+
+  [1m[38;5;15mShift+Tab[0m[38;5;7m[48;5;0m:mode[2m  │  [0;1m[38;5;15m[48;5;0mCtrl+x[0m[38;5;7m[48;5;0m:shortcuts                                                             [39m
+

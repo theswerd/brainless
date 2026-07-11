@@ -1,0 +1,30 @@
+/ D I F F / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / / /
+diff --git a/scratch.txt b/scratch.txt
+index e382994..401fe17 100644
+--- a/scratch.txt
++++ b/scratch.txt
+@@ -1 +1 @@
+-hello scratch
++hello scratch edited
+diff --git a/other.txt b/other.txt
+new file mode 100644
+index 0000000..fa49b07
+--- /dev/null
++++ b/other.txt
+@@ -0,0 +1 @@
++new file
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+~
+───────────────────────────────────────────────────────────────────────────────────────────── 100% ─
+ ↑/↓ to scroll   pgup/pgdn to page   home/end to jump
+ q to quit
+

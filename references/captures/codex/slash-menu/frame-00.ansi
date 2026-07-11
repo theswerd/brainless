@@ -1,0 +1,30 @@
+[2m│ [0;4m[38;5;6mhttps://github.com/openai/codex/releases/latest[0;2m │[0m
+[2m╰─────────────────────────────────────────────────╯[0m
+
+[2m╭───────────────────────────────────────────────────╮[0m
+[2m│ >_ [0;1mOpenAI Codex[0;2m (v0.132.0)                        │[0m
+[2m│                                                   │[0m
+[2m│ model:     [0mgpt-5.6-sol low[2m   [0m[38;5;6m/model[2m[39m to change     │[0m
+[2m│ directory: [0m/private/tmp/brainless-capture-workdir[2m │[0m
+[2m╰───────────────────────────────────────────────────╯[0m
+
+  [1mTip:[0m [3mNew[0m Use [1m/fast[0m to enable our fastest inference with increased plan usage.
+
+[38;5;3m⚠ MCP client for `github` failed to start: MCP startup failed: Environment variable GITHUB_PAT_TOKEN
+[39m  [38;5;3mfor MCP server 'github' is not set[39m
+
+[38;5;3m⚠ Heads up, you have less than 25% of your 5h limit left. Run /status for a breakdown.[39m
+
+[38;5;3m⚠ MCP startup incomplete (failed: github)[39m
+
+
+[1m›[0m /
+
+  [1m[38;5;6m/model         choose what model and reasoning effort to use[0m
+  /ide           [2minclude current selection, open files, and other context from your IDE[0m
+  /permissions   [2mchoose what Codex is allowed to do[0m
+  /keymap        [2mremap TUI shortcuts[0m
+  /vim           [2mtoggle Vim mode for the composer[0m
+  /experimental  [2mtoggle experimental features[0m
+  /approve       [2mapprove one retry of a recent auto-review denial[0m
+  /memories      [2mconfigure memory use and generation[0m

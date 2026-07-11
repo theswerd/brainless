@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-turn-end",
+  "title": "Grok Turn End",
+  "description": "Post-turn footer — Turn completed in 8.0s.",
+  "files": [
+    {
+      "path": "registry/brainless/grok/grok-turn-end.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * GrokTurnEnd — the post-turn footer Grok prints after `◆ stop`.\n *\n * Captured: `Turn completed in 8.0s.`\n */\nconst MUTED = \"#8b8b90\";\n\nexport function GrokTurnEnd({\n  elapsed = \"8.0s\",\n  className,\n}: {\n  elapsed?: string;\n  className?: string;\n}) {\n  return (\n    <p\n      className={cn(\"font-mono text-[13px] leading-[1.55]\", className)}\n      style={{ color: MUTED }}\n      role=\"status\"\n    >\n      Turn completed in {elapsed}.\n    </p>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/grok/grok-turn-end.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

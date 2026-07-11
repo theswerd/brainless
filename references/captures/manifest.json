@@ -1,0 +1,537 @@
+{
+  "cols": 100,
+  "rows": 30,
+  "agents": [
+    {
+      "id": "claude",
+      "label": "Claude Code",
+      "cmd": "claude",
+      "cols": 100,
+      "rows": 30,
+      "scenarios": [
+        {
+          "name": "welcome",
+          "title": "Welcome / header",
+          "note": "Initial screen after launch.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "claude/welcome/frame-00.ansi",
+              "txt": "claude/welcome/frame-00.txt",
+              "html": "claude/welcome/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "slash-menu",
+          "title": "Slash-command menu",
+          "note": "The command palette opened by typing '/'.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "claude/slash-menu/frame-00.ansi",
+              "txt": "claude/slash-menu/frame-00.txt",
+              "html": "claude/slash-menu/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "thinking",
+          "title": "Thinking / working animation",
+          "note": "Spinner frames after a trivial prompt; interrupted immediately.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "claude/thinking/frame-00.ansi",
+              "txt": "claude/thinking/frame-00.txt",
+              "html": "claude/thinking/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "claude/thinking/frame-01.ansi",
+              "txt": "claude/thinking/frame-01.txt",
+              "html": "claude/thinking/frame-01.html",
+              "lines": 31
+            },
+            {
+              "index": 2,
+              "ansi": "claude/thinking/frame-02.ansi",
+              "txt": "claude/thinking/frame-02.txt",
+              "html": "claude/thinking/frame-02.html",
+              "lines": 31
+            },
+            {
+              "index": 3,
+              "ansi": "claude/thinking/frame-03.ansi",
+              "txt": "claude/thinking/frame-03.txt",
+              "html": "claude/thinking/frame-03.html",
+              "lines": 31
+            },
+            {
+              "index": 4,
+              "ansi": "claude/thinking/frame-04.ansi",
+              "txt": "claude/thinking/frame-04.txt",
+              "html": "claude/thinking/frame-04.html",
+              "lines": 31
+            },
+            {
+              "index": 5,
+              "ansi": "claude/thinking/frame-05.ansi",
+              "txt": "claude/thinking/frame-05.txt",
+              "html": "claude/thinking/frame-05.html",
+              "lines": 31
+            },
+            {
+              "index": 6,
+              "ansi": "claude/thinking/frame-06.ansi",
+              "txt": "claude/thinking/frame-06.txt",
+              "html": "claude/thinking/frame-06.html",
+              "lines": 31
+            },
+            {
+              "index": 7,
+              "ansi": "claude/thinking/frame-07.ansi",
+              "txt": "claude/thinking/frame-07.txt",
+              "html": "claude/thinking/frame-07.html",
+              "lines": 31
+            },
+            {
+              "index": 8,
+              "ansi": "claude/thinking/frame-08.ansi",
+              "txt": "claude/thinking/frame-08.txt",
+              "html": "claude/thinking/frame-08.html",
+              "lines": 31
+            },
+            {
+              "index": 9,
+              "ansi": "claude/thinking/frame-09.ansi",
+              "txt": "claude/thinking/frame-09.txt",
+              "html": "claude/thinking/frame-09.html",
+              "lines": 31
+            },
+            {
+              "index": 10,
+              "ansi": "claude/thinking/frame-10.ansi",
+              "txt": "claude/thinking/frame-10.txt",
+              "html": "claude/thinking/frame-10.html",
+              "lines": 31
+            },
+            {
+              "index": 11,
+              "ansi": "claude/thinking/frame-11.ansi",
+              "txt": "claude/thinking/frame-11.txt",
+              "html": "claude/thinking/frame-11.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "modes",
+          "title": "Composer + mode cycle",
+          "note": "Claude Code permission modes via shift+tab: auto \u2192 manual \u2192 accept edits \u2192 plan \u2192 auto. Composer is the dual-rule \u276f field.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "claude/modes/frame-00.ansi",
+              "txt": "claude/modes/frame-00.txt",
+              "html": "claude/modes/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "claude/modes/frame-01.ansi",
+              "txt": "claude/modes/frame-01.txt",
+              "html": "claude/modes/frame-01.html",
+              "lines": 31
+            },
+            {
+              "index": 2,
+              "ansi": "claude/modes/frame-02.ansi",
+              "txt": "claude/modes/frame-02.txt",
+              "html": "claude/modes/frame-02.html",
+              "lines": 31
+            },
+            {
+              "index": 3,
+              "ansi": "claude/modes/frame-03.ansi",
+              "txt": "claude/modes/frame-03.txt",
+              "html": "claude/modes/frame-03.html",
+              "lines": 31
+            },
+            {
+              "index": 4,
+              "ansi": "claude/modes/frame-04.ansi",
+              "txt": "claude/modes/frame-04.txt",
+              "html": "claude/modes/frame-04.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "todos",
+          "title": "Task list (todos)",
+          "note": "TaskCreate + TaskUpdate with completed / in_progress / pending items, then ctrl+t to expand the task list panel.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "claude/todos/frame-00.ansi",
+              "txt": "claude/todos/frame-00.txt",
+              "html": "claude/todos/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "claude/todos/frame-01.ansi",
+              "txt": "claude/todos/frame-01.txt",
+              "html": "claude/todos/frame-01.html",
+              "lines": 31
+            },
+            {
+              "index": 2,
+              "ansi": "claude/todos/frame-02.ansi",
+              "txt": "claude/todos/frame-02.txt",
+              "html": "claude/todos/frame-02.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "title": "Plan mode / exit-plan prompt",
+          "note": "Shift+tab into plan mode, request a short plan, capture the plan presentation / exit-plan UI.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "claude/plan/frame-00.ansi",
+              "txt": "claude/plan/frame-00.txt",
+              "html": "claude/plan/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "claude/plan/frame-01.ansi",
+              "txt": "claude/plan/frame-01.txt",
+              "html": "claude/plan/frame-01.html",
+              "lines": 31
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "codex",
+      "label": "Codex CLI",
+      "cmd": "codex",
+      "cols": 100,
+      "rows": 30,
+      "scenarios": [
+        {
+          "name": "welcome",
+          "title": "Welcome / header",
+          "note": "Initial screen after launch.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "codex/welcome/frame-00.ansi",
+              "txt": "codex/welcome/frame-00.txt",
+              "html": "codex/welcome/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "slash-menu",
+          "title": "Slash-command menu",
+          "note": "The command palette opened by typing '/'.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "codex/slash-menu/frame-00.ansi",
+              "txt": "codex/slash-menu/frame-00.txt",
+              "html": "codex/slash-menu/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "thinking",
+          "title": "Thinking / working animation",
+          "note": "Spinner frames after a trivial prompt; interrupted immediately.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "codex/thinking/frame-00.ansi",
+              "txt": "codex/thinking/frame-00.txt",
+              "html": "codex/thinking/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "codex/thinking/frame-01.ansi",
+              "txt": "codex/thinking/frame-01.txt",
+              "html": "codex/thinking/frame-01.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "modes",
+          "title": "Composer + mode cycle",
+          "note": "Codex Default \u2194 Plan mode via shift+tab. Composer is the \u203a field with model/cwd status line.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "codex/modes/frame-00.ansi",
+              "txt": "codex/modes/frame-00.txt",
+              "html": "codex/modes/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "codex/modes/frame-01.ansi",
+              "txt": "codex/modes/frame-01.txt",
+              "html": "codex/modes/frame-01.html",
+              "lines": 31
+            },
+            {
+              "index": 2,
+              "ansi": "codex/modes/frame-02.ansi",
+              "txt": "codex/modes/frame-02.txt",
+              "html": "codex/modes/frame-02.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "diff",
+          "title": "Diff pager",
+          "note": "Full-screen /diff unified git diff with spaced DIFF title bar and quit footer.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "codex/diff/frame-00.ansi",
+              "txt": "codex/diff/frame-00.txt",
+              "html": "codex/diff/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "permissions",
+          "title": "Permissions chooser",
+          "note": "/permissions numbered radio list for Default / Auto-review / Full Access.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "codex/permissions/frame-00.ansi",
+              "txt": "codex/permissions/frame-00.txt",
+              "html": "codex/permissions/frame-00.html",
+              "lines": 31
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "grok",
+      "label": "Grok CLI",
+      "cmd": "grok",
+      "cols": 100,
+      "rows": 30,
+      "scenarios": [
+        {
+          "name": "intro",
+          "title": "Boot / logo animation",
+          "note": "Frames from the first moments of launch \u2014 catches the logo drawing in.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/intro/frame-00.ansi",
+              "txt": "grok/intro/frame-00.txt",
+              "html": "grok/intro/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "grok/intro/frame-01.ansi",
+              "txt": "grok/intro/frame-01.txt",
+              "html": "grok/intro/frame-01.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "welcome",
+          "title": "Welcome / header",
+          "note": "Initial screen after launch.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/welcome/frame-00.ansi",
+              "txt": "grok/welcome/frame-00.txt",
+              "html": "grok/welcome/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "slash-menu",
+          "title": "Slash-command menu",
+          "note": "The command palette opened by typing '/'.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/slash-menu/frame-00.ansi",
+              "txt": "grok/slash-menu/frame-00.txt",
+              "html": "grok/slash-menu/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "thinking",
+          "title": "Thinking / working animation",
+          "note": "Spinner frames after a trivial prompt; interrupted immediately.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/thinking/frame-00.ansi",
+              "txt": "grok/thinking/frame-00.txt",
+              "html": "grok/thinking/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "modes",
+          "title": "Composer + mode cycle",
+          "note": "Grok modes via shift+tab: normal \u2192 plan \u2192 auto \u2192 always-approve \u2192 normal. Composer is the rounded box with model \u00b7 mode in the bottom-right legend.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/modes/frame-00.ansi",
+              "txt": "grok/modes/frame-00.txt",
+              "html": "grok/modes/frame-00.html",
+              "lines": 31
+            },
+            {
+              "index": 1,
+              "ansi": "grok/modes/frame-01.ansi",
+              "txt": "grok/modes/frame-01.txt",
+              "html": "grok/modes/frame-01.html",
+              "lines": 31
+            },
+            {
+              "index": 2,
+              "ansi": "grok/modes/frame-02.ansi",
+              "txt": "grok/modes/frame-02.txt",
+              "html": "grok/modes/frame-02.html",
+              "lines": 31
+            },
+            {
+              "index": 3,
+              "ansi": "grok/modes/frame-03.ansi",
+              "txt": "grok/modes/frame-03.txt",
+              "html": "grok/modes/frame-03.html",
+              "lines": 31
+            },
+            {
+              "index": 4,
+              "ansi": "grok/modes/frame-04.ansi",
+              "txt": "grok/modes/frame-04.txt",
+              "html": "grok/modes/frame-04.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "permission",
+          "title": "Permission / approval",
+          "note": "Left-border approval card with (\u25cf)/(\u25cb) radios and 1/3:select hint bar.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/permission/frame-00.ansi",
+              "txt": "grok/permission/frame-00.txt",
+              "html": "grok/permission/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "plan",
+          "title": "Plan approval",
+          "note": "plan.md framed viewer with a/s/c/q actions and Waiting on plan approval.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/plan/frame-00.ansi",
+              "txt": "grok/plan/frame-00.txt",
+              "html": "grok/plan/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "write",
+          "title": "Write / edit chrome",
+          "note": "Line-numbered before/after inside \u2503 border with hook \u2713/\u2717 lines.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/write/frame-00.ansi",
+              "txt": "grok/write/frame-00.txt",
+              "html": "grok/write/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "settings",
+          "title": "Settings modal",
+          "note": "F2 Settings overlay \u2014 Appearance rows with \u25b8 markers and on/off values.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/settings/frame-00.ansi",
+              "txt": "grok/settings/frame-00.txt",
+              "html": "grok/settings/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "shortcuts",
+          "title": "Keyboard shortcuts",
+          "note": "Ctrl+x Keyboard Shortcuts modal with nested \u25c6/\u203a categories.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/shortcuts/frame-00.ansi",
+              "txt": "grok/shortcuts/frame-00.txt",
+              "html": "grok/shortcuts/frame-00.html",
+              "lines": 31
+            }
+          ]
+        },
+        {
+          "name": "turn",
+          "title": "Completed turn",
+          "note": "Status bar + \u25c6 events + Thought + timestamps + Turn completed.",
+          "frames": [
+            {
+              "index": 0,
+              "ansi": "grok/turn/frame-00.ansi",
+              "txt": "grok/turn/frame-00.txt",
+              "html": "grok/turn/frame-00.html",
+              "lines": 31
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

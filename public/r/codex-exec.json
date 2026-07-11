@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "codex-exec",
+  "title": "Codex Exec",
+  "description": "A Codex action/exec line with a status dot and expandable output, as a real <details> disclosure.",
+  "files": [
+    {
+      "path": "registry/brainless/codex/codex-exec.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * CodexExec — a Codex action/exec line: a command or edit with an optional\n * result count, and expandable output as a real <details> disclosure.\n */\ntype Status = \"ok\" | \"error\" | \"run\";\n\nconst DOT: Record<Status, string> = {\n  ok: \"#4ea96f\",\n  error: \"#f7768e\",\n  run: \"#e0af68\",\n};\n\nexport function CodexExec({\n  command,\n  result,\n  status = \"ok\",\n  defaultOpen = false,\n  className,\n  children,\n}: {\n  command: string;\n  result?: string;\n  status?: Status;\n  defaultOpen?: boolean;\n  className?: string;\n  children?: React.ReactNode;\n}) {\n  const expandable = Boolean(children);\n  return (\n    <details\n      open={defaultOpen}\n      className={cn(\n        \"group font-mono text-[13px] leading-[1.55] [&_summary::-webkit-details-marker]:hidden\",\n        className,\n      )}\n    >\n      <summary\n        className={cn(\n          \"flex list-none items-baseline gap-2 outline-none\",\n          expandable ? \"cursor-pointer\" : \"cursor-default\",\n          \"focus-visible:ring-1 focus-visible:ring-[#5cc2e0]/60\",\n        )}\n      >\n        <span aria-hidden style={{ color: DOT[status] }}>\n          •\n        </span>\n        <span className=\"text-[#5cc2e0]\">{command}</span>\n        {result ? <span className=\"text-[#7a7a7a]\">{result}</span> : null}\n        {expandable ? (\n          <span className=\"text-[#565656] group-open:hidden\">▸</span>\n        ) : null}\n      </summary>\n      {expandable ? (\n        <pre className=\"mt-1 overflow-x-auto whitespace-pre-wrap pl-4 text-[#8a8a8a]\">\n          {children}\n        </pre>\n      ) : null}\n    </details>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/codex/codex-exec.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

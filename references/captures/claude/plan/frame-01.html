@@ -1,0 +1,30 @@
+
+<span style="color:#d78787">╭───</span> <span style="color:#d78787">Claude Code</span> <span style="color:#949494">v2.1.207</span> <span style="color:#d78787">─────────────────────────────────────────────────────────────────────────╮
+</span><span style="color:#afd7ff">▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+</span>  <span style="color:#5fafaf">──────────────────────────────────────────────────────────────────────────────────────────────────
+</span>   <span style="color:#afd7ff;font-weight:600">Ready to code?</span>
+
+   Here is Claude&#x27;s plan:
+  <span style="color:#4e4e4e">╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+</span>   <span style="font-weight:600;font-style:italic;text-decoration:underline">Plan: Dark-Mode Toggle on Settings Page</span>
+
+   Add a dark-mode toggle to the settings page by introducing a theme state with three values
+   (light, dark, system) managed in a small theme provider at the app root, which applies a <span style="color:#afd7ff">dark</span>
+   class (or <span style="color:#afd7ff">data-theme</span> attribute) to the document root element so styles can key off it. Persist
+   the user&#x27;s choice in <span style="color:#afd7ff">localStorage</span> and, on first load, fall back to the <span style="color:#afd7ff">prefers-color-scheme</span> media
+   query when the stored value is &quot;system&quot; or absent; apply the theme in an inline script before
+   first paint to avoid a flash of the wrong theme. On the settings page, render a labeled,
+   keyboard-accessible toggle (or three-way segmented control) wired to the provider, and verify by
+   switching themes, reloading the page, and changing the OS-level preference to confirm persistence
+   and system-following behavior both work.
+  <span style="color:#5fafaf">──────────────────────────────────────────────────────────────────────────────────────────────────
+</span>   <span style="color:#949494">Claude has written up a plan and is ready to execute. Would you like to proceed?</span>
+
+   <span style="color:#afd7ff">❯</span> <span style="color:#949494">1. </span><span style="color:#afd7ff">Yes, and use auto mode</span>
+     <span style="color:#949494">2. </span>Yes, manually approve edits
+     <span style="color:#949494">3. </span>No, refine with Ultraplan on Claude Code on the web
+     <span style="color:#949494">4. Tell Claude what to change</span>
+        <span style="color:#949494">shift+tab to approve with this feedback</span>
+
+   <span style="color:#949494">ctrl+g to edit in </span> <span style="color:#949494;font-weight:600">Vim</span> <span style="color:#949494"> · ~/.claude/plans/write-a-one-paragraph-plan-humming-clock.md</span>

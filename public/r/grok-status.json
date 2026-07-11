@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-status",
+  "title": "Grok Status",
+  "description": "Top status bar — branch glyph, cwd, context usage (16K / 500K), and optional turn progress (2/3 ✓).",
+  "files": [
+    {
+      "path": "registry/brainless/grok/grok-status.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * GrokStatus — Grok CLI's top status bar.\n *\n * Captured grammar (v0.2.93): branch glyph + cwd on the left; optional MCP\n * spinner (`⠴ MCP (2/3)`), context usage (`16K / 500K`), and turn progress\n * (`│ 2/3 ✓`) on the right.\n */\nconst FG = \"#e1e1e1\";\nconst MUTED = \"#8b8b90\";\nconst DIM = \"#808080\"; // 38;5;8 — MCP spinner\nconst OK = \"#00ff00\"; // 38;5;10 — turn ✓\n\nexport function GrokStatus({\n  branch = \"main\",\n  directory = \"~/dev/brainless\",\n  contextUsed = \"16K\",\n  contextLimit = \"500K\",\n  turn,\n  turnTotal,\n  mcp,\n  mcpTotal,\n  className,\n}: {\n  branch?: string;\n  directory?: string;\n  contextUsed?: string;\n  contextLimit?: string;\n  /** Completed steps in the current turn, e.g. 2 of 3. */\n  turn?: number;\n  turnTotal?: number;\n  /** Connected MCP servers so far (shows spinner while loading). */\n  mcp?: number;\n  mcpTotal?: number;\n  className?: string;\n}) {\n  const showTurn =\n    typeof turn === \"number\" && typeof turnTotal === \"number\" && turnTotal > 0;\n  const showMcp =\n    typeof mcp === \"number\" && typeof mcpTotal === \"number\" && mcpTotal > 0;\n\n  return (\n    <div\n      className={cn(\n        \"flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 font-mono text-[12px]\",\n        className,\n      )}\n      role=\"status\"\n      aria-label=\"Session status\"\n    >\n      <div className=\"min-w-0 truncate\" style={{ color: MUTED }}>\n        <span aria-hidden style={{ color: FG }}>\n          {\" \"}\n        </span>\n        <span style={{ color: FG }}>{branch}</span>\n        <span style={{ color: DIM }}> </span>\n        <span>{directory}</span>\n      </div>\n\n      <div\n        className=\"flex shrink-0 flex-wrap items-baseline gap-x-2 tabular-nums\"\n        style={{ color: MUTED }}\n      >\n        {showMcp ? (\n          <span style={{ color: DIM }}>\n            <span aria-hidden>⠴ </span>\n            MCP ({mcp}/{mcpTotal})\n          </span>\n        ) : null}\n        <span>\n          {contextUsed}\n          <span style={{ color: DIM }}> / </span>\n          {contextLimit}\n        </span>\n        {showTurn ? (\n          <>\n            <span style={{ color: DIM }}>│</span>\n            <span>\n              {turn}/{turnTotal}\n            </span>{\" \"}\n            <span aria-hidden style={{ color: OK }}>\n              ✓\n            </span>\n            <span className=\"sr-only\"> steps complete</span>\n          </>\n        ) : null}\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/grok/grok-status.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

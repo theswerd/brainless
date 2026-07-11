@@ -1,0 +1,30 @@
+
+[38;5;174m╭───[39m [38;5;174mClaude Code[39m [38;5;246mv2.1.207[39m [38;5;174m─────────────────────────────────────────────────────────────────────────╮
+[38;5;153m▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+
+[39m  [38;5;73m──────────────────────────────────────────────────────────────────────────────────────────────────
+[39m   [1m[38;5;153mReady to code?[0m
+
+   Here is Claude's plan:
+  [38;5;239m╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+[39m   [1;3;4mPlan: Dark-Mode Toggle on Settings Page[0m
+
+   Add a dark-mode toggle to the settings page by introducing a theme state with three values
+   (light, dark, system) managed in a small theme provider at the app root, which applies a [38;5;153mdark[39m
+   class (or [38;5;153mdata-theme[39m attribute) to the document root element so styles can key off it. Persist
+   the user's choice in [38;5;153mlocalStorage[39m and, on first load, fall back to the [38;5;153mprefers-color-scheme[39m media
+   query when the stored value is "system" or absent; apply the theme in an inline script before
+   first paint to avoid a flash of the wrong theme. On the settings page, render a labeled,
+   keyboard-accessible toggle (or three-way segmented control) wired to the provider, and verify by
+   switching themes, reloading the page, and changing the OS-level preference to confirm persistence
+   and system-following behavior both work.
+  [38;5;73m──────────────────────────────────────────────────────────────────────────────────────────────────
+[39m   [38;5;246mClaude has written up a plan and is ready to execute. Would you like to proceed?[39m
+
+   [38;5;153m❯[39m [38;5;246m1. [38;5;153mYes, and use auto mode[39m
+     [38;5;246m2. [39mYes, manually approve edits
+     [38;5;246m3. [39mNo, refine with Ultraplan on Claude Code on the web
+     [38;5;246m4. Tell Claude what to change[39m
+        [38;5;246mshift+tab to approve with this feedback[39m
+
+   [38;5;246mctrl+g to edit in [39m [1m[38;5;246mVim[0m [38;5;246m · ~/.claude/plans/write-a-one-paragraph-plan-humming-clock.md[39m

@@ -1,0 +1,22 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "codex-session",
+  "title": "Codex Session",
+  "description": "A complete Codex CLI screen: header, a full turn (messages, exec lines, working) and the › composer.",
+  "registryDependencies": [
+    "codex-header",
+    "codex-message",
+    "codex-exec",
+    "codex-working",
+    "codex-prompt"
+  ],
+  "files": [
+    {
+      "path": "registry/brainless/blocks/codex-session.tsx",
+      "content": "import { CodexHeader } from \"@/registry/brainless/codex/codex-header\";\nimport { CodexMessage } from \"@/registry/brainless/codex/codex-message\";\nimport { CodexExec } from \"@/registry/brainless/codex/codex-exec\";\nimport { CodexWorking } from \"@/registry/brainless/codex/codex-working\";\nimport { CodexPrompt } from \"@/registry/brainless/codex/codex-prompt\";\n\n/**\n * CodexSession — a complete Codex CLI screen: launch card, a full turn\n * (prompt → reply → exec lines → working) and the pinned › composer.\n */\nexport function CodexSession() {\n  return (\n    <div className=\"space-y-3 font-mono text-[13px] leading-[1.6] text-[#ededed]\">\n      <CodexHeader directory=\"~/dev/acme-app\" />\n\n      <div className=\"text-[#e0af68]\">\n        <span aria-hidden>⚠ </span>\n        MCP startup incomplete (failed: github)\n      </div>\n\n      <div className=\"space-y-3 pt-1\">\n        <CodexMessage role=\"user\">\n          add a dark-mode toggle to the settings page and run the tests\n        </CodexMessage>\n\n        <CodexMessage>\n          I&apos;ll read the settings page, add the toggle, then run the suite.\n        </CodexMessage>\n\n        <div className=\"space-y-1\">\n          <CodexExec command=\"Read app/settings/page.tsx\" />\n          <CodexExec\n            command=\"Edited app/settings/page.tsx\"\n            result=\"(+12 −1)\"\n          />\n          <CodexExec command=\"Edited components/theme-toggle.tsx\" result=\"(+48 −0)\" />\n          <CodexExec command=\"Ran bun test\" result=\"→ passed\">\n            {`bun test v1.2.21\n✓ settings > renders the theme toggle\n✓ theme > persists across reloads\n 12 pass\n 0 fail`}\n          </CodexExec>\n        </div>\n\n        <CodexWorking />\n      </div>\n\n      <div className=\"pt-2\">\n        <CodexPrompt directory=\"~/dev/acme-app\" />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/brainless/blocks/codex-session.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

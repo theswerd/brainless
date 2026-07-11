@@ -1,0 +1,30 @@
+
+  /private/tmp/brainless-capture-workdir
+
+
+   ╭────────────────────────────────────────────────────────────────────────────────────────────╮
+   │                                                                                            │
+   │  ⠀⠀⠀⠀⠀⠀⣀⣀⡀⠀⠀⠀⢀⠄   Grok Build Beta  0.2.93                                                  │
+   │  ⠀⠀⠀⣠⣾⠿⠛⠛⠛⠛⢀⡴⠁⠀                                                                            │
+   │  ⠀⠀⣼⡟⠁⠀⠀⠀⢀⡴⠻⣿⡀⠀   Grok 4.5 is here!                                                        │
+   │  ⠀⠀⣿⡇⠀⠀⠀⠔⠁⠀⠀⣿⡇⠀   Grok 4.5 is now available. Try it out in the /model picker.              │
+   │  ⠀⠀⢹⣷⠀⠀⠀⠀⠀⢀⣴⡿⠀⠀                                                                            │
+   │  ⠀⢀⠞⠁⠠⢶⣶⣶⣶⠿⠋⠀⠀⠀   New worktree                                                     ctrl+w  │
+   │  ⠐⠁⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀   Resume session                                                   ctrl+s  │
+   │                   Changelog                                                                │
+   │                   Quit                                                             ctrl+q  │
+   │                                                                                            │
+   ╰────────────────────────────────────────────────────────────────────────────────────────────╯
+
+
+
+
+  Tip: Start Grok in a fresh worktree with `-w`; add `-r <session-id>` to resume an existing
+  session there.
+
+  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ ❯                                                                                            │
+  ╰────────────────────────────────────────────────────────── Grok 4.5 (xhigh) · always-approve ─╯
+
+                                                                                          [stable]
+

@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-session",
+  "title": "Grok Session",
+  "description": "A complete Grok CLI screen: status bar, header, and a full turn (events, thought, tools, write, approval, turn end) with the rounded composer.",
+  "registryDependencies": [
+    "grok-status",
+    "grok-header",
+    "grok-message",
+    "grok-event",
+    "grok-thought",
+    "grok-tool",
+    "grok-write",
+    "grok-permission",
+    "grok-turn-end",
+    "grok-prompt"
+  ],
+  "files": [
+    {
+      "path": "registry/brainless/blocks/grok-session.tsx",
+      "content": "import { GrokStatus } from \"@/registry/brainless/grok/grok-status\";\nimport { GrokHeader } from \"@/registry/brainless/grok/grok-header\";\nimport { GrokMessage } from \"@/registry/brainless/grok/grok-message\";\nimport { GrokEvent } from \"@/registry/brainless/grok/grok-event\";\nimport { GrokThought } from \"@/registry/brainless/grok/grok-thought\";\nimport { GrokTool } from \"@/registry/brainless/grok/grok-tool\";\nimport { GrokWrite } from \"@/registry/brainless/grok/grok-write\";\nimport { GrokPermission } from \"@/registry/brainless/grok/grok-permission\";\nimport { GrokTurnEnd } from \"@/registry/brainless/grok/grok-turn-end\";\nimport { GrokPrompt } from \"@/registry/brainless/grok/grok-prompt\";\n\n/**\n * GrokSession — a complete Grok CLI screen: status bar, launch card, a full\n * turn (prompt → hooks → thought → tools → write → approval → stop) and the\n * rounded composer.\n */\nexport function GrokSession() {\n  return (\n    <div className=\"space-y-3 font-mono text-[13px] leading-[1.6] text-[#e8e8e8]\">\n      <GrokStatus\n        branch=\"main\"\n        directory=\"~/dev/acme-app\"\n        contextUsed=\"16K\"\n        contextLimit=\"500K\"\n        turn={2}\n        turnTotal={3}\n      />\n\n      <GrokHeader />\n\n      <div className=\"text-[#6c6c6c]\">\n        Tip: Use Shift+Tab to cycle between modes, like Plan mode.\n      </div>\n\n      <div className=\"space-y-2 pt-1\">\n        <GrokMessage role=\"user\" time=\"4:38 PM\">\n          add a dark-mode toggle to the settings page and run the tests\n        </GrokMessage>\n\n        <GrokEvent label=\"user_prompt_submit\" hooks={3} hooksOk={1} />\n        <GrokThought elapsed=\"0.4s\" />\n\n        <GrokMessage time=\"4:38 PM\">\n          I&apos;ll inspect the settings page, drop in a toggle, then run the\n          suite.\n        </GrokMessage>\n\n        <GrokTool verb=\"read\" path=\"app/settings/page.tsx\" />\n        <GrokTool\n          variant=\"card\"\n          title=\"Run Write components/theme-toggle.tsx\"\n          hooks={3}\n        />\n        <GrokWrite\n          before={[{ n: 12, text: \"return <SettingsForm />\" }]}\n          after={[{ n: 12, text: \"return <SettingsForm showThemeToggle />\" }]}\n        />\n\n        <GrokPermission\n          title=\"Edit app/settings/page.tsx\"\n          command=\"apply patch (+1 −1)\"\n        />\n\n        <GrokEvent label=\"stop\" hooks={3} hooksOk={1} />\n        <GrokTurnEnd elapsed=\"12.4s\" />\n      </div>\n\n      <div className=\"pt-3\">\n        <GrokPrompt mode=\"always-approve\" showShortcuts={false} />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/brainless/blocks/grok-session.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

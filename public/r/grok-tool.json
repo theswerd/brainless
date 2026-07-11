@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-tool",
+  "title": "Grok Tool",
+  "description": "A Grok action — compact verb+path, or a ┃ ◆ card with [hooks: N].",
+  "files": [
+    {
+      "path": "registry/brainless/grok/grok-tool.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * GrokTool — a Grok action line.\n *\n * Two captured forms:\n *   1. Compact: `read app/page.tsx` (dim verb, blue path)\n *   2. Card:    `┃  ◆ Run Write …  [hooks: 3]` (left gutter + diamond)\n */\nconst GREEN = \"#00ff00\"; // 38;5;10 — active Run tool cards\nconst MUTED = \"#8b8b90\";\nconst DIM = \"#6c6c6c\";\nconst BLUE = \"#8db0ff\";\nconst SILVER = \"#c0c0c0\";\n\nexport function GrokTool({\n  verb,\n  path,\n  meta,\n  variant = \"line\",\n  title,\n  hooks,\n  className,\n  children,\n}: {\n  verb?: string;\n  path?: string;\n  meta?: string;\n  variant?: \"line\" | \"card\";\n  /** Card title, e.g. \"Run Write permission probe output file\". */\n  title?: string;\n  hooks?: number;\n  className?: string;\n  children?: React.ReactNode;\n}) {\n  if (variant === \"card\") {\n    const heading = title ?? [verb, path].filter(Boolean).join(\" \");\n    return (\n      <div\n        className={cn(\n          \"border-l-2 pl-3 font-mono text-[13px] leading-[1.55]\",\n          className,\n        )}\n        style={{ borderColor: GREEN }}\n      >\n        <div className=\"flex flex-wrap items-baseline gap-x-2\">\n          <span aria-hidden style={{ color: GREEN }}>\n            ◆\n          </span>\n          <span className=\"font-semibold\" style={{ color: SILVER }}>\n            {heading}\n          </span>\n          {hooks != null ? (\n            <span style={{ color: DIM }}>\n              [hooks: <span style={{ color: GREEN }}>{hooks}</span>]\n            </span>\n          ) : null}\n        </div>\n        {children ? (\n          <div className=\"mt-1\" style={{ color: MUTED }}>\n            {children}\n          </div>\n        ) : null}\n      </div>\n    );\n  }\n\n  return (\n    <div\n      className={cn(\n        \"flex items-baseline gap-2 font-mono text-[13px] leading-[1.6] text-[#8b8b90]\",\n        className,\n      )}\n    >\n      {verb ? <span>{verb}</span> : null}\n      {path ? <span style={{ color: BLUE }}>{path}</span> : null}\n      {meta ? <span className=\"text-[#6a6a6a]\">{meta}</span> : null}\n      {children}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/grok/grok-tool.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

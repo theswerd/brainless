@@ -1,0 +1,30 @@
+
+   main /private/tmp/brainless-capture-workdir                                         15K / 500K
+
+               ┌─ Settings ─────────────────────────────────────────────────── [✗] ─┐             
+     ❯ Reply wi│                                                                    │    4:57 PM  
+               │   / to search                                                      │             
+               │  ────────────────────────────────────────────────────────────────  │
+     ◆ session_│   Appearance ────────────────────────────────────────────────────  │
+     ◆ user_pro│  ▸ Compact mode                                           off      │
+     ◆ Thought │  ▸ Show timestamps                                         on      │
+               │  ▸ Disable vim input mode                                  on      │
+     hello prob│  ▸ Vim scrollback navigation                              off      │    4:57 PM
+               │  ▸ Theme                                           Grok Night  ›   │
+     ◆ stop  [h│  ▸ Auto dark theme                                 Grok Night  ›   │
+               │  ▸ Auto light theme                                  Grok Day  ›   │
+     Turn compl│  ▸ Render Mermaid diagrams                               Auto  ›   │
+               │  ▸ Max thoughts width                                     120      │
+               │  ▸ Show thinking blocks                                    on      │
+               │  ▸ Respect manual folds                                   off      │
+               │  ▸ Group tool calls                                        on      │
+               │   Mouse ─────────────────────────────────────────────────────────  │
+               │                                                                    │
+               │                 Tip · Ask Grok to change a setting                 │
+               │                                                                    │
+  ╭────────────│   ↑/↓/j/k nav  |  g/G top/btm  |  Space toggle  |  Enter toggle    │────────────╮
+  │ ❯          │         → expand  |  / search  |  d reset  |  F2/Esc close         │            │
+  ╰────────────└────────────────────────────────────────────────────────────────────┘.5 (xhigh) ─╯
+
+
+

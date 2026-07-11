@@ -1,0 +1,30 @@
+
+  /private/tmp/brainless-capture-workdir                                               5.5K / 500K
+
+     ◆ session_start  [hooks: 2]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    Switched to mode: Plan                                                                        
+
+  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ ❯                                                                                            │
+  ╰──────────────────────────────────────────────────────────────────── Grok 4.5 (xhigh) · plan ─╯
+
+  Shift+Tab:mode  │  Ctrl+x:shortcuts                                                             
+

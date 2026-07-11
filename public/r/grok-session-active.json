@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-session-active",
+  "title": "Grok Session Active",
+  "description": "A mid-turn Grok CLI screen: status bar, streaming thought, tool card, write preview, and the working footer with ⇣tokens / [stop].",
+  "registryDependencies": [
+    "grok-status",
+    "grok-message",
+    "grok-event",
+    "grok-thought",
+    "grok-tool",
+    "grok-write",
+    "grok-working",
+    "grok-prompt"
+  ],
+  "files": [
+    {
+      "path": "registry/brainless/blocks/grok-session-active.tsx",
+      "content": "import { GrokStatus } from \"@/registry/brainless/grok/grok-status\";\nimport { GrokMessage } from \"@/registry/brainless/grok/grok-message\";\nimport { GrokEvent } from \"@/registry/brainless/grok/grok-event\";\nimport { GrokThought } from \"@/registry/brainless/grok/grok-thought\";\nimport { GrokTool } from \"@/registry/brainless/grok/grok-tool\";\nimport { GrokWrite } from \"@/registry/brainless/grok/grok-write\";\nimport { GrokWorking } from \"@/registry/brainless/grok/grok-working\";\nimport { GrokPrompt } from \"@/registry/brainless/grok/grok-prompt\";\n\n/**\n * GrokSessionActive — a mid-turn Grok CLI screen: status bar, live transcript\n * (hooks → streaming thought → tool card → write preview), the working footer\n * with token count / stop, and the composer in cancel mode.\n */\nexport function GrokSessionActive() {\n  return (\n    <div className=\"space-y-3 font-mono text-[13px] leading-[1.6] text-[#e8e8e8]\">\n      <GrokStatus\n        branch=\"main\"\n        directory=\"~/dev/acme-app\"\n        contextUsed=\"16.6k\"\n        contextLimit=\"500K\"\n        turn={1}\n        turnTotal={3}\n      />\n\n      <div className=\"space-y-2 pt-1\">\n        <GrokMessage role=\"user\" time=\"4:51 PM\">\n          overwrite theme-toggle.tsx so the label reads &quot;Dark mode&quot;.\n          Nothing else.\n        </GrokMessage>\n\n        <GrokEvent label=\"user_prompt_submit\" hooks={3} hooksOk={1} />\n\n        <GrokThought streaming>\n          theme-toggle.tsx already exports ThemeToggle. I&apos;ll patch the\n          visible label to &quot;Dark mode&quot;, then stop.\n        </GrokThought>\n\n        <GrokTool\n          variant=\"card\"\n          title=\"Run Write components/theme-toggle.tsx\"\n          hooks={3}\n        />\n\n        <GrokWrite\n          before={[{ n: 18, text: 'aria-label=\"Toggle theme\"' }]}\n          after={[{ n: 18, text: 'aria-label=\"Dark mode\"' }]}\n          hooks={{\n            pre: [\n              {\n                label: \"global/settings:pre_tool_use[0].hooks[0]\",\n                ok: true,\n                ms: 11,\n              },\n            ],\n          }}\n        />\n\n        <GrokWorking\n          diamond\n          label=\"Write components/theme-toggle.tsx…\"\n          tokens=\"16.6k\"\n          showScrollHint\n        />\n      </div>\n\n      <div className=\"pt-3\">\n        <GrokPrompt mode=\"always-approve\" busy showShortcuts />\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "components/brainless/blocks/grok-session-active.tsx"
+    }
+  ],
+  "type": "registry:block"
+}

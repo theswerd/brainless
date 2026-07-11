@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-thought",
+  "title": "Grok Thought",
+  "description": "Completed or streaming thought — ◆ Thought for 0.2s, or a bordered Thinking… body.",
+  "files": [
+    {
+      "path": "registry/brainless/grok/grok-thought.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * GrokThought — a completed or streaming thought block.\n *\n * Captured forms:\n *   `◆ Thought for 0.2s`                         (one-liner)\n *   `❙  ◆ Thought for 0.1s`                      (gutter)\n *   `┃  ◆ Thinking…` + body                      (bordered stream)\n */\nconst BORDER = \"#808080\"; // 38;5;8\nconst FG = \"#e1e1e1\";\nconst MUTED = \"#c0c0c0\"; // 38;5;7\nconst SILVER = \"#c0c0c0\";\n\nexport function GrokThought({\n  elapsed = \"0.2s\",\n  streaming = false,\n  gutter = false,\n  className,\n  children,\n}: {\n  elapsed?: string;\n  streaming?: boolean;\n  /** Use the `❙` gutter marker instead of a plain diamond line. */\n  gutter?: boolean;\n  className?: string;\n  children?: React.ReactNode;\n}) {\n  const label = streaming ? \"Thinking…\" : `Thought for ${elapsed}`;\n\n  if (children || streaming) {\n    return (\n      <div\n        className={cn(\n          \"border-l-2 pl-3 font-mono text-[13px] leading-[1.55]\",\n          className,\n        )}\n        style={{ borderColor: BORDER }}\n        role=\"status\"\n        aria-live={streaming ? \"polite\" : undefined}\n      >\n        <div className=\"flex items-baseline gap-2\">\n          <span aria-hidden style={{ color: BORDER }}>\n            ◆\n          </span>\n          <span className=\"font-semibold\" style={{ color: MUTED }}>\n            {label}\n          </span>\n        </div>\n        {children ? (\n          <div className=\"mt-1 whitespace-pre-wrap\" style={{ color: FG }}>\n            {children}\n          </div>\n        ) : null}\n      </div>\n    );\n  }\n\n  return (\n    <div\n      className={cn(\n        \"flex items-baseline gap-2 font-mono text-[13px] leading-[1.55]\",\n        className,\n      )}\n    >\n      {gutter ? (\n        <span aria-hidden style={{ color: BORDER }}>\n          ❙\n        </span>\n      ) : null}\n      <span aria-hidden style={{ color: SILVER }}>\n        ◆\n      </span>\n      <span style={{ color: MUTED }}>{label}</span>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/grok/grok-thought.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

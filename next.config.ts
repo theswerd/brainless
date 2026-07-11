@@ -1,7 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  async rewrites() {
+    return [
+      // /llms/claude-header.txt → /llms/claude-header
+      { source: "/llms/:name.txt", destination: "/llms/:name" },
+    ];
+  },
 };
 
 export default nextConfig;

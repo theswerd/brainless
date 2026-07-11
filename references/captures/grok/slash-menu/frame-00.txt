@@ -1,0 +1,30 @@
+
+  /private/tmp/brainless-capture-workdir
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ─────────────────────────────────────────────────────────────────────────────────────────────53─
+     ❯ /quit           Quit the application                                                      █
+       /help           Browse commands and keyboard shortcuts                                     
+       /docs           Open How-to Guides or online Build docs                                    
+       /home           Return to the welcome screen                                               
+       /new            Start a new session                                                        
+       /fork           Branch the current session into a peer agent                               
+  ────────────────────────────────────────────────────────────────────────────────────────────────
+  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ ❯ /                                                                                          │
+  ╰────────────────────────────────────────────────────────── Grok 4.5 (xhigh) · always-approve ─╯
+
+  Enter:send  │  Shift+Tab:mode  │  Ctrl+x:shortcuts                                              
+

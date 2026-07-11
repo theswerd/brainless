@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "codex-header",
+  "title": "Codex Header",
+  "description": "Codex CLI's monochrome launch card with its model / directory rows.",
+  "files": [
+    {
+      "path": "registry/brainless/codex/codex-header.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * CodexHeader — Codex CLI's launch card. Monochrome and terse, matching the\n * real `>_ OpenAI Codex` box with its model / directory rows.\n */\nexport function CodexHeader({\n  version = \"v0.132.0\",\n  model = \"gpt-5.6-sol low\",\n  directory = \"~/dev/brainless\",\n  className,\n}: {\n  version?: string;\n  model?: string;\n  directory?: string;\n  className?: string;\n}) {\n  return (\n    <div\n      className={cn(\n        \"rounded-[6px] border border-[#3a3a3a] px-4 py-3 font-mono text-[13px] leading-[1.7] text-[#ededed]\",\n        className,\n      )}\n    >\n      <div className=\"flex items-baseline gap-2\">\n        <span aria-hidden className=\"text-[#7a7a7a]\">\n          {\">_\"}\n        </span>\n        <span className=\"font-medium\">OpenAI Codex</span>\n        <span className=\"text-[#7a7a7a]\">({version})</span>\n      </div>\n      <div className=\"mt-2 grid grid-cols-[max-content_1fr] gap-x-3\">\n        <span className=\"text-[#7a7a7a]\">model:</span>\n        <span>\n          {model}\n          <span className=\"ml-3 text-[#5cc2e0]\">/model</span>\n          <span className=\"ml-1 text-[#7a7a7a]\">to change</span>\n        </span>\n        <span className=\"text-[#7a7a7a]\">directory:</span>\n        <span className=\"truncate\">{directory}</span>\n      </div>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/codex/codex-header.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

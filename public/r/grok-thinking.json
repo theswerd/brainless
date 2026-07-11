@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-thinking",
+  "title": "Grok Thinking",
+  "description": "Grok's idle working line — a braille spinner and rotating verb in amber, as an aria-live status region.",
+  "files": [
+    {
+      "path": "registry/brainless/grok/grok-thinking.tsx",
+      "content": "\"use client\";\n\nimport * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * GrokThinking — Grok's working line: a braille spinner and a rotating verb in\n * Grok's amber, with a live elapsed hint. Polite live region for screen\n * readers.\n */\nconst FRAMES = [\"⠋\", \"⠙\", \"⠹\", \"⠸\", \"⠼\", \"⠴\", \"⠦\", \"⠧\", \"⠇\", \"⠏\"];\nconst VERBS = [\"Thinking\", \"Reticulating\", \"Computing\", \"Pondering\", \"Percolating\"];\n\nconst FG = \"#ffffff\"; // 38;5;15\nconst MUTED = \"#c0c0c0\"; // 38;5;7\n\nexport function GrokThinking({\n  running = true,\n  verbs = VERBS,\n  className,\n}: {\n  running?: boolean;\n  verbs?: string[];\n  className?: string;\n}) {\n  const [f, setF] = React.useState(0);\n  const [v, setV] = React.useState(0);\n  const [secs, setSecs] = React.useState(0);\n\n  React.useEffect(() => {\n    if (!running) return;\n    const id = setInterval(() => setF((n) => (n + 1) % FRAMES.length), 90);\n    return () => clearInterval(id);\n  }, [running]);\n\n  React.useEffect(() => {\n    if (!running) return;\n    const id = setInterval(() => {\n      setSecs((s) => s + 1);\n      if (secs % 5 === 4) setV((x) => (x + 1) % verbs.length);\n    }, 1000);\n    return () => clearInterval(id);\n  }, [running, secs, verbs.length]);\n\n  if (!running) return null;\n\n  return (\n    <div\n      role=\"status\"\n      aria-live=\"polite\"\n      className={cn(\"flex items-center gap-2 font-mono text-[13px]\", className)}\n    >\n      <span aria-hidden style={{ color: FG, width: \"1ch\" }}>\n        {FRAMES[f]}\n      </span>\n      <span style={{ color: FG }}>{verbs[v % verbs.length]}…</span>\n      <span style={{ color: MUTED }}>({secs}s)</span>\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/grok/grok-thinking.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

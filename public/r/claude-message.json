@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "claude-message",
+  "title": "Claude Message",
+  "description": "A conversation turn — Claude Code's ❯ chip for the user, plain text for the assistant.",
+  "files": [
+    {
+      "path": "registry/brainless/claude/claude-message.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * ClaudeMessage — a conversation turn. User turns render as Claude Code's\n * full-width prompt row (`❯` + one cell of space, dark background across the\n * row, white text); assistant turns are plain text.\n */\nexport function ClaudeMessage({\n  role = \"assistant\",\n  className,\n  children,\n}: {\n  role?: \"user\" | \"assistant\";\n  className?: string;\n  children: React.ReactNode;\n}) {\n  if (role === \"user\") {\n    return (\n      <div\n        className={cn(\n          \"flex w-full items-baseline font-mono text-[13px] leading-[1.55]\",\n          className,\n        )}\n        style={{ background: \"#3a3a3a\" }}\n      >\n        <span aria-hidden style={{ color: \"#4e4e4e\" }}>\n          ❯\n        </span>\n        {/* one terminal cell between caret and text — a trailing space inside\n            a flex child collapses, so use an explicit width */}\n        <span aria-hidden style={{ display: \"inline-block\", width: \"1ch\" }} />\n        <span className=\"min-w-0\" style={{ color: \"#ffffff\" }}>\n          {children}\n        </span>\n      </div>\n    );\n  }\n  return (\n    <div\n      className={cn(\"font-mono text-[13px] leading-[1.6] text-[#c0caf5]\", className)}\n    >\n      {children}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/claude/claude-message.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

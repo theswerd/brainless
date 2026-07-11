@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "claude-todo-list",
+  "title": "Claude Todo List",
+  "description": "The Update Todos block as a real list, with state labels and a struck-through done style.",
+  "files": [
+    {
+      "path": "registry/brainless/claude/claude-todo-list.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * ClaudeTodoList — Claude Code's task list (TaskCreate / TaskUpdate).\n *\n * Capture grammar (v2.1.207), with one intentional deviation: icons stay in a\n * single column. Real Claude puts `  ⎿\\u00a0` before the first ✔ (space + nbsp),\n * which shoves that check a cell right of a natural `⎿ ` pairing — we use a\n * single space after ⎿ so ✔ / ◼ / ◻ line up.\n *\n *   ⎿ ✔ done     (green + strikethrough)\n *     ◼ active   (terracotta + bold)\n *     ◻ pending  (default foreground)\n */\nexport type Todo = {\n  label: string;\n  status: \"done\" | \"active\" | \"todo\";\n};\n\nconst DONE = \"#87d787\"; // 38;5;114\nconst ACTIVE = \"#d78787\"; // 38;5;174 — Claude terracotta\nconst DIM = \"#949494\"; // 38;5;246\n\nconst ICON: Record<Todo[\"status\"], string> = {\n  done: \"✔\",\n  active: \"◼\",\n  todo: \"◻\",\n};\n\nexport function ClaudeTodoList({\n  todos,\n  className,\n}: {\n  todos: Todo[];\n  className?: string;\n}) {\n  return (\n    <ol className={cn(\"font-mono text-[13px] leading-[1.6]\", className)}>\n      {todos.map((t, i) => {\n        const iconColor =\n          t.status === \"done\"\n            ? DONE\n            : t.status === \"active\"\n              ? ACTIVE\n              : undefined;\n\n        return (\n          <li key={i} className=\"whitespace-pre\">\n            {/*\n              First row: \"  ⎿ \" then icon. Later rows: four spaces so the\n              icon column lines up under ✔ (no capture-style nbsp jump).\n            */}\n            <span aria-hidden style={{ color: DIM }}>\n              {i === 0 ? \"  ⎿ \" : \"    \"}\n            </span>\n            <span aria-hidden style={{ color: iconColor }}>\n              {ICON[t.status]}{\" \"}\n            </span>\n            <span\n              className={cn(\n                t.status === \"done\" && \"line-through\",\n                t.status === \"active\" && \"font-semibold\",\n              )}\n              style={{\n                color: t.status === \"done\" ? DIM : undefined,\n              }}\n            >\n              {t.label}\n              <span className=\"sr-only\">\n                {\" \"}\n                ({t.status === \"done\"\n                  ? \"completed\"\n                  : t.status === \"active\"\n                    ? \"in progress\"\n                    : \"pending\"})\n              </span>\n            </span>\n          </li>\n        );\n      })}\n    </ol>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/claude/claude-todo-list.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

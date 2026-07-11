@@ -1,0 +1,30 @@
+[38;5;174m╭───[39m [38;5;174mClaude Code[39m [38;5;246mv2.1.207[39m [38;5;174m─────────────────────────────────────────────────────────────────────────╮
+│[39m                                                    [2m[38;5;174m│[0m [1m[38;5;174mTips for getting started[0m                    [38;5;174m│
+│[39m                  [1mWelcome back Ben![0m                 [2m[38;5;174m│[0m Ask Claude to create a new app or clone a … [38;5;174m│
+│[39m                                                    [2m[38;5;174m│[0m [38;5;174m───────────────────────────────────────────[39m [38;5;174m│
+│[39m                      [38;5;174m ▐[48;5;16m▛███▜[49m▌[39m                      [2m[38;5;174m│[0m [1m[38;5;174mWhat's new[0m                                  [38;5;174m│
+│[39m                      [38;5;174m▝▜[48;5;16m█████[49m▛▘[39m                     [2m[38;5;174m│[0m Added directory path suggestions to `/cd`,… [38;5;174m│
+│[39m                      [38;5;174m  ▘▘ ▝▝  [39m                     [2m[38;5;174m│[0m Added a `/doctor` check that proposes trim… [38;5;174m│
+│[39m      [38;5;246mFable 5 with xhigh effort · Claude Max · [39m     [2m[38;5;174m│[0m `/commit-push-pr` now auto-allows `git pus… [38;5;174m│
+│[39m      [38;5;246mben@freestyle.sh's Organization[39m               [2m[38;5;174m│[0m [3m[38;5;246m/release-notes for more[0m                     [38;5;174m│
+│[39m       [38;5;246m/private/tmp/brainless-capture-workdir[39m       [2m[38;5;174m│[0m                                             [38;5;174m│
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+[39m [38;5;220m⚠[39m [38;5;220m3 MCP servers need authentication[38;5;246m · run /mcp[39m
+
+[38;5;239m[48;5;237m❯ [38;5;231mCreate exactly three tasks with TaskCreate, then update their statuses with TaskUpdate, then [39m
+  [38;5;231mstop. Do not read files. Tasks: (1) subject='Read the settings page' → status completed; (2) [39m
+  [38;5;231msubject='Add the dark-mode toggle' → status in_progress; (3) subject='Run the test suite' → [39m
+  [38;5;231mstatus pending. After creating/updating, press nothing else — just finish.[39m
+
+[38;5;231m[49m⏺[39m I'll load the task tools, then create and update the three tasks.
+
+[38;5;174m✢[39m [38;5;216mAdd the dark-mode toggle…[38;5;174m [38;5;246m(50s · ↓[39m [38;5;246m566 tokens)[39m
+[38;5;246m  ⎿  [38;5;114m✔ [9m[38;5;246mRead the settings page[0m
+     [38;5;174m◼ [1m[39mAdd the dark-mode toggle[0m
+     ◻ Run the test suite
+
+[38;5;244m────────────────────────────────────────────────────────────────────────────────────────────────────
+[38;5;246m❯ [39m
+[38;5;244m────────────────────────────────────────────────────────────────────────────────────────────────────
+[39m  [38;5;220m⏵⏵ auto mode on[38;5;246m (shift+tab to cycle) · esc to interrupt · ctrl+t to hide tasks · ← for agents[39m

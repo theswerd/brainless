@@ -1,0 +1,30 @@
+╭─── Claude Code v2.1.207 ─────────────────────────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting started                    │
+│                  Welcome back Ben!                 │ Ask Claude to create a new app or clone a … │
+│                                                    │ ─────────────────────────────────────────── │
+│                       ▐▛███▜▌                      │ What's new                                  │
+│                      ▝▜█████▛▘                     │ Added directory path suggestions to `/cd`,… │
+│                        ▘▘ ▝▝                       │ Added a `/doctor` check that proposes trim… │
+│      Fable 5 with xhigh effort · Claude Max ·      │ `/commit-push-pr` now auto-allows `git pus… │
+│      ben@freestyle.sh's Organization               │ /release-notes for more                     │
+│       /private/tmp/brainless-capture-workdir       │                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ ⚠ 3 MCP servers need authentication · run /mcp
+
+❯ Create exactly three tasks with TaskCreate, then update their statuses with TaskUpdate, then 
+  stop. Do not read files. Tasks: (1) subject='Read the settings page' → status completed; (2) 
+  subject='Add the dark-mode toggle' → status in_progress; (3) subject='Run the test suite' → 
+  status pending. After creating/updating, press nothing else — just finish.
+
+⏺ I'll load the task tools, then create and update the three tasks.
+
+✢ Add the dark-mode toggle… (50s · ↓ 566 tokens)
+  ⎿  ✔ Read the settings page
+     ◼ Add the dark-mode toggle
+     ◻ Run the test suite
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · esc to interrupt · ctrl+t to hide tasks · ← for agents

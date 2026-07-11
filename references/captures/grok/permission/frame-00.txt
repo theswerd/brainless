@@ -1,0 +1,30 @@
+
+   main /private/tmp/brainless-capture-workdir                                         16K / 500K
+
+
+     ❯ Run this exact shell command and nothing else: echo permission-probe-ok > /tmp/   4:38 PM   █
+       brainless-capture-workdir/probe-out.txt                                                     █
+                                                                                                   █
+                                                                                                   █
+     ◆ user_prompt_submit  [hooks: 3/1]                                                            █
+     ◆ Thought for 0.2s                                                                            █
+                                                                                                   █
+     Running the exact command you specified.                                            4:38 PM   █
+                                                                                                   █
+  ┃  ◆ Run Write permission probe output file  [hooks: 3]                                          █
+                                                                                                   █
+                                                                                                   █
+
+    ◆ Write permission probe output file… 1m17s                             1m19s ⇣16.0k [↓][stop]
+
+  ┃
+  ┃  Write permission probe output file
+  ┃  echo permission-probe-ok > /tmp/brainless-capture-workdir/probe-out.txt
+  ┃
+  ┃  1 (●) Yes, and don't ask again for anything (always-approve mode)
+  ┃  2 (○) Yes, proceed
+  ┃  3 (○) No, reject (type to add feedback)
+  ┃
+
+  1/3:select  │  Ctrl+o:yolo  │  Ctrl+c:cancel
+

@@ -1,0 +1,30 @@
+
+  /private/tmp/brainless-capture-workdir
+
+
+
+
+
+
+
+
+
+
+
+
+
+  ┃                                                                                               
+  ┃  Run Grok Build in a project directory?                                                       
+  ┃                                                                                               
+  ┃  This gives Grok Build full context of your codebase for better results.                      
+  ┃                                                                                               
+  ┃  1 (○) brainless-capture-workdir (current)  /private/tmp/brainless-capture-workdir           █
+  ┃  2 (○) freestyle-cloudstate                 ~/Documents/GitHub/freestyle-cloudstate  (5h…    █
+  ┃  3 (○) Conduit                              ~/Documents/Conduit  (5h ago)                     
+  ┃  z (○) Type your answer here                                                                  
+  ┃                                                                                               
+  ┃  ↑/↓ navigate · y copy                                                        Enter:submit    
+  ┃                                                                                               
+
+  Esc:unselect  │  Tab:scrollback  │  Shift+x:dismiss                                             
+

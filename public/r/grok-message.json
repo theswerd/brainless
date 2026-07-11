@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-message",
+  "title": "Grok Message",
+  "description": "A Grok conversation turn — the ❯ user marker or plain assistant text, with optional wall-clock timestamp.",
+  "files": [
+    {
+      "path": "registry/brainless/grok/grok-message.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * GrokMessage — a Grok turn. User prompts carry the ❯ marker; the assistant\n * reply is plain text. Optional wall-clock `time` (e.g. `4:38 PM`) pins to the\n * right, matching the live CLI transcript.\n */\nexport function GrokMessage({\n  role = \"assistant\",\n  time,\n  className,\n  children,\n}: {\n  role?: \"user\" | \"assistant\";\n  time?: string;\n  className?: string;\n  children: React.ReactNode;\n}) {\n  if (role === \"user\") {\n    return (\n      <div\n        className={cn(\n          \"flex gap-2 font-mono text-[13px] leading-[1.6] text-[#e8e8e8]\",\n          className,\n        )}\n      >\n        <span aria-hidden className=\"shrink-0\">\n          ❯\n        </span>\n        <span className=\"min-w-0 flex-1\">{children}</span>\n        {time ? (\n          <span className=\"shrink-0 tabular-nums text-[#6c6c6c]\">{time}</span>\n        ) : null}\n      </div>\n    );\n  }\n\n  return (\n    <div\n      className={cn(\n        \"flex gap-2 font-mono text-[13px] leading-[1.6] text-[#cfcfd2]\",\n        className,\n      )}\n    >\n      <span className=\"min-w-0 flex-1\">{children}</span>\n      {time ? (\n        <span className=\"shrink-0 tabular-nums text-[#6c6c6c]\">{time}</span>\n      ) : null}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/grok/grok-message.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

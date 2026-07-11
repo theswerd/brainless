@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "grok-event",
+  "title": "Grok Event",
+  "description": "A ◆ diamond event line — Thought, user_prompt_submit, stop — with optional [hooks: N/M] badge.",
+  "files": [
+    {
+      "path": "registry/brainless/grok/grok-event.tsx",
+      "content": "import * as React from \"react\";\nimport { cn } from \"@/lib/utils\";\n\n/**\n * GrokEvent — a ◆ diamond event line from Grok's transcript.\n *\n * Captured examples: `◆ Thought for 0.2s`, `◆ user_prompt_submit  [hooks: 3/1]`,\n * `◆ stop  [hooks: 3/1]`, `◆ List .  [hooks: 3]`.\n */\nconst SILVER = \"#c0c0c0\"; // 38;5;7 — ◆ event diamonds\nconst FG = \"#e1e1e1\";\nconst MUTED = \"#8b8b90\";\nconst DIM = \"#6c6c6c\";\nconst GREEN = \"#00ff00\"; // 38;5;10 — successful hook counts\n\nexport function GrokEvent({\n  label,\n  hooks,\n  hooksOk,\n  elapsed,\n  className,\n  children,\n}: {\n  label: string;\n  /** Total hooks fired, e.g. 3. */\n  hooks?: number;\n  /** Successful hooks when shown as `3/1`. */\n  hooksOk?: number;\n  /** Optional elapsed suffix, e.g. `0.2s` → \"Thought for 0.2s\" style via label. */\n  elapsed?: string;\n  className?: string;\n  children?: React.ReactNode;\n}) {\n  const hooksText =\n    hooks == null\n      ? null\n      : hooksOk != null\n        ? null // rendered with split colors below\n        : (\n            <span style={{ color: DIM }}>\n              [hooks: <span style={{ color: GREEN }}>{hooks}</span>]\n            </span>\n          );\n\n  return (\n    <div\n      className={cn(\n        \"flex flex-wrap items-baseline gap-x-2 font-mono text-[13px] leading-[1.55]\",\n        className,\n      )}\n    >\n      <span aria-hidden style={{ color: SILVER }}>\n        ◆\n      </span>\n      <span style={{ color: FG }}>\n        {label}\n        {elapsed ? (\n          <>\n            {\" \"}\n            <span style={{ color: MUTED }}>{elapsed}</span>\n          </>\n        ) : null}\n      </span>\n      {hooks != null && hooksOk != null ? (\n        <span style={{ color: DIM }}>\n          [hooks:{\" \"}\n          <span style={{ color: GREEN }}>{hooks}</span>\n          <span>/{hooksOk}</span>]\n        </span>\n      ) : (\n        hooksText\n      )}\n      {children}\n    </div>\n  );\n}\n",
+      "type": "registry:ui",
+      "target": "components/brainless/grok/grok-event.tsx"
+    }
+  ],
+  "type": "registry:ui"
+}

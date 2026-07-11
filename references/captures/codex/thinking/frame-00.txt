@@ -1,0 +1,30 @@
+
+╭───────────────────────────────────────────────────╮
+│ >_ OpenAI Codex (v0.132.0)                        │
+│                                                   │
+│ model:     gpt-5.6-sol low   /model to change     │
+│ directory: /private/tmp/brainless-capture-workdir │
+╰───────────────────────────────────────────────────╯
+
+  Tip: Try the Codex App. Run 'codex app' or visit https://chatgpt.com/codex?app-landing-page=true
+
+⚠ MCP client for `github` failed to start: MCP startup failed: Environment variable GITHUB_PAT_TOKEN
+  for MCP server 'github' is not set
+
+⚠ Heads up, you have less than 25% of your 5h limit left. Run /status for a breakdown.
+
+⚠ MCP startup incomplete (failed: github)
+
+
+› hi
+
+
+⚠ Model metadata for `gpt-5.6-sol` not found. Defaulting to fallback metadata; this can degrade
+  performance and cause issues.
+
+• Working (0s • esc to interrupt)
+
+
+› Explain this codebase
+
+  gpt-5.6-sol low · /private/tmp/brainless-capture-workdir

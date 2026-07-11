@@ -1,0 +1,329 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry.json",
+  "name": "brainless",
+  "homepage": "https://brainless.swerdlow.dev",
+  "items": [
+    {
+      "name": "claude-header",
+      "type": "registry:ui",
+      "title": "Claude Header",
+      "description": "Claude Code's welcome box — logo, tips, and model/cwd lines — with the title as a semantic fieldset legend.",
+      "files": [{ "path": "registry/brainless/claude/claude-header.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-header.tsx" }]
+    },
+    {
+      "name": "claude-message",
+      "type": "registry:ui",
+      "title": "Claude Message",
+      "description": "A conversation turn — Claude Code's ❯ chip for the user, plain text for the assistant.",
+      "files": [{ "path": "registry/brainless/claude/claude-message.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-message.tsx" }]
+    },
+    {
+      "name": "claude-thinking",
+      "type": "registry:ui",
+      "title": "Claude Thinking",
+      "description": "The working line — pulsing sparkle, rotating verb, elapsed/interrupt hint — as an aria-live status region.",
+      "files": [{ "path": "registry/brainless/claude/claude-thinking.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-thinking.tsx" }]
+    },
+    {
+      "name": "claude-tool-call",
+      "type": "registry:ui",
+      "title": "Claude Tool Call",
+      "description": "The ⏺ / ⎿ tool line as a real, keyboard-operable <details> disclosure.",
+      "files": [{ "path": "registry/brainless/claude/claude-tool-call.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-tool-call.tsx" }]
+    },
+    {
+      "name": "claude-todo-list",
+      "type": "registry:ui",
+      "title": "Claude Todo List",
+      "description": "The Update Todos block as a real list, with state labels and a struck-through done style.",
+      "files": [{ "path": "registry/brainless/claude/claude-todo-list.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-todo-list.tsx" }]
+    },
+    {
+      "name": "claude-diff",
+      "type": "registry:ui",
+      "title": "Claude Diff",
+      "description": "An inline edit hunk with tinted +/- rows, line numbers, and off-screen added/removed labels.",
+      "files": [{ "path": "registry/brainless/claude/claude-diff.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-diff.tsx" }]
+    },
+    {
+      "name": "claude-permission",
+      "type": "registry:ui",
+      "title": "Claude Permission",
+      "description": "The 'Do you want to proceed?' approval prompt as an arrow-key radiogroup.",
+      "files": [{ "path": "registry/brainless/claude/claude-permission.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-permission.tsx" }]
+    },
+    {
+      "name": "claude-prompt",
+      "type": "registry:ui",
+      "title": "Claude Prompt",
+      "description": "The input composer — dual CSS rules around a real text input, effort chips (low ○ / medium ◐ / high ● / xhigh ◉ / max ◈ / ultracode ✦), and shift+tab modes (auto / manual / accept-edits / plan).",
+      "files": [{ "path": "registry/brainless/claude/claude-prompt.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-prompt.tsx" }]
+    },
+    {
+      "name": "claude-slash-menu",
+      "type": "registry:ui",
+      "title": "Claude Slash Menu",
+      "description": "Slash-command palette above the real ClaudePrompt composer — type after / to filter, arrow keys to move.",
+      "registryDependencies": ["claude-prompt"],
+      "files": [{ "path": "registry/brainless/claude/claude-slash-menu.tsx", "type": "registry:ui", "target": "components/brainless/claude/claude-slash-menu.tsx" }]
+    },
+    {
+      "name": "codex-header",
+      "type": "registry:ui",
+      "title": "Codex Header",
+      "description": "Codex CLI's monochrome launch card with its model / directory rows.",
+      "files": [{ "path": "registry/brainless/codex/codex-header.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-header.tsx" }]
+    },
+    {
+      "name": "codex-message",
+      "type": "registry:ui",
+      "title": "Codex Message",
+      "description": "A Codex conversation turn — bold › user marker or plain assistant text.",
+      "files": [{ "path": "registry/brainless/codex/codex-message.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-message.tsx" }]
+    },
+    {
+      "name": "codex-exec",
+      "type": "registry:ui",
+      "title": "Codex Exec",
+      "description": "A Codex action/exec line with a status dot and expandable output, as a real <details> disclosure.",
+      "files": [{ "path": "registry/brainless/codex/codex-exec.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-exec.tsx" }]
+    },
+    {
+      "name": "codex-working",
+      "type": "registry:ui",
+      "title": "Codex Working",
+      "description": "Codex's Working line — a • bullet, grayscale shimmer on Working, and live elapsed/interrupt hint, as an aria-live status region.",
+      "files": [{ "path": "registry/brainless/codex/codex-working.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-working.tsx" }]
+    },
+    {
+      "name": "codex-prompt",
+      "type": "registry:ui",
+      "title": "Codex Prompt",
+      "description": "Codex's › text input with warm model / green cwd status line and Plan mode tag (#bb9af7).",
+      "files": [{ "path": "registry/brainless/codex/codex-prompt.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-prompt.tsx" }]
+    },
+    {
+      "name": "codex-diff",
+      "type": "registry:ui",
+      "title": "Codex Diff",
+      "description": "Codex's full-screen /diff pager — spaced DIFF title bar, unified git hunks, ~ fillers, and quit footer.",
+      "files": [{ "path": "registry/brainless/codex/codex-diff.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-diff.tsx" }]
+    },
+    {
+      "name": "codex-permissions",
+      "type": "registry:ui",
+      "title": "Codex Permissions",
+      "description": "The /permissions chooser — numbered Default / Auto-review / Full Access options as a real radiogroup.",
+      "files": [{ "path": "registry/brainless/codex/codex-permissions.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-permissions.tsx" }]
+    },
+    {
+      "name": "codex-slash-menu",
+      "type": "registry:ui",
+      "title": "Codex Slash Menu",
+      "description": "Slash-command palette under the real CodexPrompt composer — type after / to filter, arrow keys to move.",
+      "registryDependencies": ["codex-prompt"],
+      "files": [{ "path": "registry/brainless/codex/codex-slash-menu.tsx", "type": "registry:ui", "target": "components/brainless/codex/codex-slash-menu.tsx" }]
+    },
+    {
+      "name": "grok-header",
+      "type": "registry:ui",
+      "title": "Grok Header",
+      "description": "Grok CLI's launch card — the braille mark drawn as a crisp dot-matrix SVG with its resting grayscale-shimmer sweep (reduced-motion aware), build banner, and a start menu of real buttons.",
+      "files": [{ "path": "registry/brainless/grok/grok-header.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-header.tsx" }]
+    },
+    {
+      "name": "grok-status",
+      "type": "registry:ui",
+      "title": "Grok Status",
+      "description": "Top status bar — branch glyph, cwd, context usage (16K / 500K), and optional turn progress (2/3 ✓).",
+      "files": [{ "path": "registry/brainless/grok/grok-status.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-status.tsx" }]
+    },
+    {
+      "name": "grok-message",
+      "type": "registry:ui",
+      "title": "Grok Message",
+      "description": "A Grok conversation turn — the ❯ user marker or plain assistant text, with optional wall-clock timestamp.",
+      "files": [{ "path": "registry/brainless/grok/grok-message.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-message.tsx" }]
+    },
+    {
+      "name": "grok-event",
+      "type": "registry:ui",
+      "title": "Grok Event",
+      "description": "A ◆ diamond event line — Thought, user_prompt_submit, stop — with optional [hooks: N/M] badge.",
+      "files": [{ "path": "registry/brainless/grok/grok-event.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-event.tsx" }]
+    },
+    {
+      "name": "grok-thought",
+      "type": "registry:ui",
+      "title": "Grok Thought",
+      "description": "Completed or streaming thought — ◆ Thought for 0.2s, or a bordered Thinking… body.",
+      "files": [{ "path": "registry/brainless/grok/grok-thought.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-thought.tsx" }]
+    },
+    {
+      "name": "grok-thinking",
+      "type": "registry:ui",
+      "title": "Grok Thinking",
+      "description": "Grok's idle working line — a braille spinner and rotating verb in amber, as an aria-live status region.",
+      "files": [{ "path": "registry/brainless/grok/grok-thinking.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-thinking.tsx" }]
+    },
+    {
+      "name": "grok-working",
+      "type": "registry:ui",
+      "title": "Grok Working",
+      "description": "In-turn status line — Waiting for response… with elapsed, ⇣token count, and [stop].",
+      "files": [{ "path": "registry/brainless/grok/grok-working.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-working.tsx" }]
+    },
+    {
+      "name": "grok-tool",
+      "type": "registry:ui",
+      "title": "Grok Tool",
+      "description": "A Grok action — compact verb+path, or a ┃ ◆ card with [hooks: N].",
+      "files": [{ "path": "registry/brainless/grok/grok-tool.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-tool.tsx" }]
+    },
+    {
+      "name": "grok-write",
+      "type": "registry:ui",
+      "title": "Grok Write",
+      "description": "Grok's inline write/edit chrome — line-numbered before/after inside a ┃ gutter, with optional hook ✓/✗ lines.",
+      "files": [{ "path": "registry/brainless/grok/grok-write.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-write.tsx" }]
+    },
+    {
+      "name": "grok-permission",
+      "type": "registry:ui",
+      "title": "Grok Permission",
+      "description": "Grok's left-border approval card with (●)/(○) radios and a 1/3:select hint bar.",
+      "files": [{ "path": "registry/brainless/grok/grok-permission.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-permission.tsx" }]
+    },
+    {
+      "name": "grok-plan",
+      "type": "registry:ui",
+      "title": "Grok Plan",
+      "description": "Grok's plan.md approval card — framed viewer, a/s/c/q actions, Waiting on plan approval, and plan-approval composer.",
+      "registryDependencies": ["grok-prompt"],
+      "files": [{ "path": "registry/brainless/grok/grok-plan.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-plan.tsx" }]
+    },
+    {
+      "name": "grok-project-picker",
+      "type": "registry:ui",
+      "title": "Grok Project Picker",
+      "description": "Run Grok Build in a project directory? — left-border chooser with recent dirs and a free-text option.",
+      "files": [{ "path": "registry/brainless/grok/grok-project-picker.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-project-picker.tsx" }]
+    },
+    {
+      "name": "grok-shortcuts",
+      "type": "registry:ui",
+      "title": "Grok Shortcuts",
+      "description": "Keyboard Shortcuts modal (Ctrl+x) — nested ◆/› categories with key bindings.",
+      "files": [{ "path": "registry/brainless/grok/grok-shortcuts.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-shortcuts.tsx" }]
+    },
+    {
+      "name": "grok-settings",
+      "type": "registry:ui",
+      "title": "Grok Settings",
+      "description": "Settings modal (F2) — Appearance / Mouse sections with ▸ rows, on/off values, and nested › pickers.",
+      "files": [{ "path": "registry/brainless/grok/grok-settings.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-settings.tsx" }]
+    },
+    {
+      "name": "grok-turn-end",
+      "type": "registry:ui",
+      "title": "Grok Turn End",
+      "description": "Post-turn footer — Turn completed in 8.0s.",
+      "files": [{ "path": "registry/brainless/grok/grok-turn-end.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-turn-end.tsx" }]
+    },
+    {
+      "name": "grok-slash-menu",
+      "type": "registry:ui",
+      "title": "Grok Slash Menu",
+      "description": "Slash-command overlay above the real GrokPrompt composer — ❯ active row, type after / to filter.",
+      "registryDependencies": ["grok-prompt"],
+      "files": [{ "path": "registry/brainless/grok/grok-slash-menu.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-slash-menu.tsx" }]
+    },
+    {
+      "name": "grok-prompt",
+      "type": "registry:ui",
+      "title": "Grok Prompt",
+      "description": "Grok's rounded CSS-border composer with a real text input and model · mode legend (normal / plan / auto / always-approve / plan approval).",
+      "files": [{ "path": "registry/brainless/grok/grok-prompt.tsx", "type": "registry:ui", "target": "components/brainless/grok/grok-prompt.tsx" }]
+    },
+    {
+      "name": "claude-session",
+      "type": "registry:block",
+      "title": "Claude Session",
+      "description": "A complete Claude Code screen: header, a full turn (plan, tool calls, diff, approval, working line) and the input composer.",
+      "registryDependencies": [
+        "claude-header",
+        "claude-message",
+        "claude-todo-list",
+        "claude-tool-call",
+        "claude-diff",
+        "claude-permission",
+        "claude-thinking",
+        "claude-prompt"
+      ],
+      "files": [{ "path": "registry/brainless/blocks/claude-session.tsx", "type": "registry:block", "target": "components/brainless/blocks/claude-session.tsx" }]
+    },
+    {
+      "name": "codex-session",
+      "type": "registry:block",
+      "title": "Codex Session",
+      "description": "A complete Codex CLI screen: header, a full turn (messages, exec lines, working) and the › composer.",
+      "registryDependencies": [
+        "codex-header",
+        "codex-message",
+        "codex-exec",
+        "codex-working",
+        "codex-prompt"
+      ],
+      "files": [{ "path": "registry/brainless/blocks/codex-session.tsx", "type": "registry:block", "target": "components/brainless/blocks/codex-session.tsx" }]
+    },
+    {
+      "name": "grok-session",
+      "type": "registry:block",
+      "title": "Grok Session",
+      "description": "A complete Grok CLI screen: status bar, header, and a full turn (events, thought, tools, write, approval, turn end) with the rounded composer.",
+      "registryDependencies": [
+        "grok-status",
+        "grok-header",
+        "grok-message",
+        "grok-event",
+        "grok-thought",
+        "grok-tool",
+        "grok-write",
+        "grok-permission",
+        "grok-turn-end",
+        "grok-prompt"
+      ],
+      "files": [{ "path": "registry/brainless/blocks/grok-session.tsx", "type": "registry:block", "target": "components/brainless/blocks/grok-session.tsx" }]
+    },
+    {
+      "name": "grok-session-active",
+      "type": "registry:block",
+      "title": "Grok Session Active",
+      "description": "A mid-turn Grok CLI screen: status bar, streaming thought, tool card, write preview, and the working footer with ⇣tokens / [stop].",
+      "registryDependencies": [
+        "grok-status",
+        "grok-message",
+        "grok-event",
+        "grok-thought",
+        "grok-tool",
+        "grok-write",
+        "grok-working",
+        "grok-prompt"
+      ],
+      "files": [{ "path": "registry/brainless/blocks/grok-session-active.tsx", "type": "registry:block", "target": "components/brainless/blocks/grok-session-active.tsx" }]
+    },
+    {
+      "name": "pied-piper-onboarding",
+      "type": "registry:block",
+      "title": "Pied Piper Onboarding",
+      "description": "An interactive sign-up flow — Pied Piper header, typed assistant lines, thinking between turns, and the Claude composer for name + intent.",
+      "registryDependencies": [
+        "claude-message",
+        "claude-thinking",
+        "claude-prompt",
+        "claude-todo-list"
+      ],
+      "files": [{ "path": "registry/brainless/blocks/pied-piper-onboarding.tsx", "type": "registry:block", "target": "components/brainless/blocks/pied-piper-onboarding.tsx" }]
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+
+   main /private/tmp/brainless-capture-workdir                                         15K / 500K
+
+                                                                                                  
+     ❯ Reply with exactly: hello probe. Nothing else.                                    4:57 PM  
+                                                                                                  
+
+     ◆ session_start  [hooks: 2]
+     ◆ user_prompt_submit  [hooks: 3/1]
+     ◆ Thought for 0.2s
+
+     hello probe.                                                                        4:57 PM
+
+     ◆ stop  [hooks: 3/1]
+
+     Turn completed in 2.7s.
+
+
+
+
+
+
+
+
+  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ ❯                                                                                            │
+  ╰─────────────────────────────────────────────────────────────────────────── Grok 4.5 (xhigh) ─╯
+
+  Shift+Tab:mode  │  Ctrl+x:shortcuts                                                             
+

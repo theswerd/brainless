@@ -1,0 +1,30 @@
+
+   main /private/tmp/brainless-capture-workdir                                 16K / 500K │ 2/3 ✓
+
+
+     ❯ Overwrite probe-new.txt with the single word world. Nothing else.                 4:51 PM
+
+
+  ┃
+  ┃    1  hello
+  ┃    1  world
+  ┃      ───
+  ┃      pre_tool_use
+  ┃        ✓ global/settings:pre_tool_use[0].hooks[0] (11ms)
+  ┃        ✓ global/cmux-session:pre_tool_use[0].hooks[0] (20ms)
+  ┃        ✓ global/orca-status:pre_tool_use[0].hooks[0] (9ms)
+  ┃      post_tool_use
+  ┃        ✓ global/settings:post_tool_use[0].hooks[0] (9ms)
+  ┃        ✗ global/settings:post_tool_use[1].hooks[0] (0ms)
+  ┃            hook not executed: required env var(s) not set: ${SUPERSET_HOME_DIR}                █
+  ┃        ✓ global/orca-status:post_tool_use[0].hooks[0] (10ms)                                   █
+                                                                                                   █
+
+    ⠹ Waiting for response… 0.1s                                                1.5s ⇣16.6k [stop]
+
+  ╭──────────────────────────────────────────────────────────────────────────────────────────────╮
+  │ ❯                                                                                            │
+  ╰────────────────────────────────────────────────────────── Grok 4.5 (xhigh) · always-approve ─╯
+
+  Shift+Tab:mode  │  Ctrl+c:cancel  │  Ctrl+x:shortcuts
+

@@ -1,0 +1,30 @@
+
+╭─── Claude Code v2.1.206 ─────────────────────────────────────────────────────────────────────────╮
+│                                                    │ Tips for getting started                    │
+│                  Welcome back Ben!                 │ Ask Claude to create a new app or clone a … │
+│                                                    │ ─────────────────────────────────────────── │
+│                       ▐▛███▜▌                      │ What's new                                  │
+│                      ▝▜█████▛▘                     │ Added directory path suggestions to `/cd`,… │
+│                        ▘▘ ▝▝                       │ Added a `/doctor` check that proposes trim… │
+│      Fable 5 with xhigh effort · Claude Max ·      │ `/commit-push-pr` now auto-allows `git pus… │
+│      ben@freestyle.sh's Organization               │ /release-notes for more                     │
+│       /private/tmp/brainless-capture-workdir       │                                             │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+ ⚠ 3 MCP servers need authentication · run /mcp
+
+❯ hi
+
+
+
+
+
+
+
+
+✢ Schlepping… 
+                                                                                  ◉ xhigh · /effort
+────────────────────────────────────────────────────────────────────────────────────────────────────
+❯ 
+────────────────────────────────────────────────────────────────────────────────────────────────────
+  ⏵⏵ auto mode on (shift+tab to cycle) · esc to interrupt · ← for agents
