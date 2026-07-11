@@ -214,7 +214,6 @@ export function PiedPiperOnboarding() {
   const [lookingFor, setLookingFor] = React.useState("");
   const [draft, setDraft] = React.useState("");
   const rootRef = React.useRef<HTMLDivElement>(null);
-  const bottomRef = React.useRef<HTMLDivElement>(null);
 
   const greeting = "Hey — what's your name?";
   const followUp = React.useMemo(() => {
@@ -270,7 +269,7 @@ export function PiedPiperOnboarding() {
     return () => clearTimeout(id);
   }, [phase]);
 
-  // Focus the composer when waiting for input.
+  // Focus the composer when waiting for input — never scroll the page.
   React.useEffect(() => {
     if (phase !== "await-name" && phase !== "await-looking" && phase !== "complete") {
       return;
@@ -278,12 +277,8 @@ export function PiedPiperOnboarding() {
     const input = rootRef.current?.querySelector<HTMLInputElement>(
       'input[aria-label="Prompt"]',
     );
-    input?.focus();
+    input?.focus({ preventScroll: true });
   }, [phase]);
-
-  React.useEffect(() => {
-    bottomRef.current?.scrollIntoView({ block: "nearest", behavior: "smooth" });
-  }, [phase, lines, displayed]);
 
   function submit() {
     const value = draft.trim();
@@ -377,8 +372,6 @@ export function PiedPiperOnboarding() {
             showTokens={false}
           />
         ) : null}
-
-        <div ref={bottomRef} />
       </div>
 
       <div className="pt-2">

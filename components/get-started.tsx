@@ -5,6 +5,7 @@ import { Check, Copy, Terminal, Sparkles } from "lucide-react";
 import {
   AGENT_PROMPT,
   INSTALL_TARGETS,
+  NAMESPACE_SETUP,
   type InstallTargetId,
 } from "@/lib/install";
 import { cn } from "@/lib/utils";
@@ -91,14 +92,19 @@ function InstallPanel() {
   const [target, setTarget] = React.useState<InstallTargetId>("claude-session");
   const active =
     INSTALL_TARGETS.find((t) => t.id === target) ?? INSTALL_TARGETS[0];
+  const combined = `${NAMESPACE_SETUP}\n${active.command}`;
 
   return (
     <Panel
       icon={<Terminal size={18} />}
       eyebrow="Install"
       title="Add a session block"
-      action={<CopyAction value={active.command} label="Copy command" />}
+      action={<CopyAction value={combined} label="Copy commands" />}
     >
+      <pre className="mb-4 overflow-x-auto bg-background/80 p-4 font-mono text-[13px] leading-relaxed text-muted-foreground">
+        <code>{NAMESPACE_SETUP}</code>
+      </pre>
+
       <div
         role="tablist"
         aria-label="Agent"
@@ -131,8 +137,8 @@ function InstallPanel() {
       </pre>
 
       <p className="mt-3 text-sm text-muted-foreground">
-        shadcn registry · pulls the full {active.label} screen and its
-        dependencies.
+        Register <span className="font-mono text-foreground">@brainless</span>{" "}
+        once, then add the {active.label} session (and its dependencies).
       </p>
     </Panel>
   );

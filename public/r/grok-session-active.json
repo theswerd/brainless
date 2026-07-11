@@ -4,14 +4,14 @@
   "title": "Grok Session Active",
   "description": "A mid-turn Grok CLI screen: status bar, streaming thought, tool card, write preview, and the working footer with ⇣tokens / [stop].",
   "registryDependencies": [
-    "grok-status",
-    "grok-message",
-    "grok-event",
-    "grok-thought",
-    "grok-tool",
-    "grok-write",
-    "grok-working",
-    "grok-prompt"
+    "https://brainless.swerdlow.dev/r/grok-status.json",
+    "https://brainless.swerdlow.dev/r/grok-message.json",
+    "https://brainless.swerdlow.dev/r/grok-event.json",
+    "https://brainless.swerdlow.dev/r/grok-thought.json",
+    "https://brainless.swerdlow.dev/r/grok-tool.json",
+    "https://brainless.swerdlow.dev/r/grok-write.json",
+    "https://brainless.swerdlow.dev/r/grok-working.json",
+    "https://brainless.swerdlow.dev/r/grok-prompt.json"
   ],
   "files": [
     {

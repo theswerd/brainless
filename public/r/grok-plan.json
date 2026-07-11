@@ -4,7 +4,7 @@
   "title": "Grok Plan",
   "description": "Grok's plan.md approval card — framed viewer, a/s/c/q actions, Waiting on plan approval, and plan-approval composer.",
   "registryDependencies": [
-    "grok-prompt"
+    "https://brainless.swerdlow.dev/r/grok-prompt.json"
   ],
   "files": [
     {

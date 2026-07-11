@@ -4,7 +4,7 @@
   "title": "Codex Slash Menu",
   "description": "Slash-command palette under the real CodexPrompt composer — type after / to filter, arrow keys to move.",
   "registryDependencies": [
-    "codex-prompt"
+    "https://brainless.swerdlow.dev/r/codex-prompt.json"
   ],
   "files": [
     {

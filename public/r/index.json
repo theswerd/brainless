@@ -1,0 +1,20 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "index",
+  "title": "brainless",
+  "description": "Default brainless install — Claude, Codex, and Grok session blocks.",
+  "registryDependencies": [
+    "https://brainless.swerdlow.dev/r/claude-session.json",
+    "https://brainless.swerdlow.dev/r/codex-session.json",
+    "https://brainless.swerdlow.dev/r/grok-session.json"
+  ],
+  "files": [
+    {
+      "path": "registry/brainless/blocks/index.md",
+      "content": "# brainless\n\nClaude Code, Codex, and Grok interfaces as [shadcn](https://ui.shadcn.com) components.\n\nInstalled from [brainless.swerdlow.dev](https://brainless.swerdlow.dev).\n\n```bash\nbunx shadcn@latest registry add @brainless=https://brainless.swerdlow.dev/r/{name}.json\nbunx shadcn@latest add @brainless/claude-session\n```\n\nImport from `@/components/brainless/...`.\n",
+      "type": "registry:file",
+      "target": "components/brainless/README.md"
+    }
+  ],
+  "type": "registry:block"
+}

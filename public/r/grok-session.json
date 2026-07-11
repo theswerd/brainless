@@ -4,16 +4,16 @@
   "title": "Grok Session",
   "description": "A complete Grok CLI screen: status bar, header, and a full turn (events, thought, tools, write, approval, turn end) with the rounded composer.",
   "registryDependencies": [
-    "grok-status",
-    "grok-header",
-    "grok-message",
-    "grok-event",
-    "grok-thought",
-    "grok-tool",
-    "grok-write",
-    "grok-permission",
-    "grok-turn-end",
-    "grok-prompt"
+    "https://brainless.swerdlow.dev/r/grok-status.json",
+    "https://brainless.swerdlow.dev/r/grok-header.json",
+    "https://brainless.swerdlow.dev/r/grok-message.json",
+    "https://brainless.swerdlow.dev/r/grok-event.json",
+    "https://brainless.swerdlow.dev/r/grok-thought.json",
+    "https://brainless.swerdlow.dev/r/grok-tool.json",
+    "https://brainless.swerdlow.dev/r/grok-write.json",
+    "https://brainless.swerdlow.dev/r/grok-permission.json",
+    "https://brainless.swerdlow.dev/r/grok-turn-end.json",
+    "https://brainless.swerdlow.dev/r/grok-prompt.json"
   ],
   "files": [
     {

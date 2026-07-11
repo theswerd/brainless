@@ -2,7 +2,7 @@
 
 Claude Code, Codex, and Grok interfaces as [shadcn](https://ui.shadcn.com) components.
 
-**Site:** [brainless.swerdlow.dev](https://brainless.swerdlow.dev)
+**Site:** [brainless.swerdlow.dev](https://brainless.swerdlow.dev) · **Repo:** [github.com/theswerd/brainless](https://github.com/theswerd/brainless)
 
 <p align="center">
   <img src="docs/screenshots/home.jpg" alt="brainless homepage — Claude Code session" width="100%" />
@@ -21,15 +21,39 @@ Components are built for fidelity against real terminal captures, then shipped a
 
 ## Install
 
-Add a full session block:
+### Namespace (recommended)
 
 ```bash
-bunx shadcn@latest add https://brainless.swerdlow.dev/r/claude-session.json
-bunx shadcn@latest add https://brainless.swerdlow.dev/r/codex-session.json
-bunx shadcn@latest add https://brainless.swerdlow.dev/r/grok-session.json
+bunx shadcn@latest registry add @brainless=https://brainless.swerdlow.dev/r/{name}.json
+bunx shadcn@latest add @brainless/claude-session
+bunx shadcn@latest add @brainless/codex-session
+bunx shadcn@latest add @brainless/grok-session
 ```
 
-Or install individual pieces from the [components](https://brainless.swerdlow.dev/components) and [blocks](https://brainless.swerdlow.dev/blocks) pages.
+Or add the registry manually in `components.json`:
+
+```json
+{
+  "registries": {
+    "@brainless": "https://brainless.swerdlow.dev/r/{name}.json"
+  }
+}
+```
+
+### URL
+
+```bash
+bunx shadcn@latest add https://brainless.swerdlow.dev
+bunx shadcn@latest add https://brainless.swerdlow.dev/r/claude-session.json
+```
+
+### GitHub
+
+```bash
+bunx shadcn@latest add theswerd/brainless/claude-session
+```
+
+Browse individual pieces on [components](https://brainless.swerdlow.dev/components) and [blocks](https://brainless.swerdlow.dev/blocks).
 
 ## Components
 
@@ -39,8 +63,6 @@ Or install individual pieces from the [components](https://brainless.swerdlow.de
 | **Codex** | header, message, working, exec, diff, permissions, prompt, slash menu |
 | **Grok** | status, header, message, thinking, thought, tool, write, turn end, prompt, slash menu, and more |
 | **Blocks** | `claude-session`, `codex-session`, `grok-session`, `grok-session-active` |
-
-Shared chrome: `terminal` window frame.
 
 <p align="center">
   <img src="docs/screenshots/components.jpg" alt="Components catalog" width="49%" />
@@ -66,10 +88,11 @@ Fidelity starts from real terminal output. The capture tools under `tools/captur
 
 ```bash
 bun install
+bun run registry:build   # writes public/r/*.json
 bun run dev
 ```
 
-Build the registry JSON into `public/r/` as needed for local `shadcn add` testing.
+`bun run build` runs the registry build, then Next.js.
 
 ## License
 

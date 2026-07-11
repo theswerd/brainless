@@ -4,7 +4,7 @@
   "title": "Claude Slash Menu",
   "description": "Slash-command palette above the real ClaudePrompt composer — type after / to filter, arrow keys to move.",
   "registryDependencies": [
-    "claude-prompt"
+    "https://brainless.swerdlow.dev/r/claude-prompt.json"
   ],
   "files": [
     {

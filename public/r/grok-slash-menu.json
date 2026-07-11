@@ -4,7 +4,7 @@
   "title": "Grok Slash Menu",
   "description": "Slash-command overlay above the real GrokPrompt composer — ❯ active row, type after / to filter.",
   "registryDependencies": [
-    "grok-prompt"
+    "https://brainless.swerdlow.dev/r/grok-prompt.json"
   ],
   "files": [
     {

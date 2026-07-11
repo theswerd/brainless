@@ -4,14 +4,14 @@
   "title": "Claude Session",
   "description": "A complete Claude Code screen: header, a full turn (plan, tool calls, diff, approval, working line) and the input composer.",
   "registryDependencies": [
-    "claude-header",
-    "claude-message",
-    "claude-todo-list",
-    "claude-tool-call",
-    "claude-diff",
-    "claude-permission",
-    "claude-thinking",
-    "claude-prompt"
+    "https://brainless.swerdlow.dev/r/claude-header.json",
+    "https://brainless.swerdlow.dev/r/claude-message.json",
+    "https://brainless.swerdlow.dev/r/claude-todo-list.json",
+    "https://brainless.swerdlow.dev/r/claude-tool-call.json",
+    "https://brainless.swerdlow.dev/r/claude-diff.json",
+    "https://brainless.swerdlow.dev/r/claude-permission.json",
+    "https://brainless.swerdlow.dev/r/claude-thinking.json",
+    "https://brainless.swerdlow.dev/r/claude-prompt.json"
   ],
   "files": [
     {

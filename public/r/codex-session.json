@@ -4,11 +4,11 @@
   "title": "Codex Session",
   "description": "A complete Codex CLI screen: header, a full turn (messages, exec lines, working) and the › composer.",
   "registryDependencies": [
-    "codex-header",
-    "codex-message",
-    "codex-exec",
-    "codex-working",
-    "codex-prompt"
+    "https://brainless.swerdlow.dev/r/codex-header.json",
+    "https://brainless.swerdlow.dev/r/codex-message.json",
+    "https://brainless.swerdlow.dev/r/codex-exec.json",
+    "https://brainless.swerdlow.dev/r/codex-working.json",
+    "https://brainless.swerdlow.dev/r/codex-prompt.json"
   ],
   "files": [
     {

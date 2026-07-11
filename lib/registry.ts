@@ -34,7 +34,7 @@ export const getRegistryItem = cache(
             content: f.content ?? "",
           }),
         ),
-        install: `bunx --bun shadcn@latest add ${siteConfig.registryBase}/${json.name}.json`,
+        install: `bunx shadcn@latest add @brainless/${json.name}`,
       };
     } catch {
       return null;

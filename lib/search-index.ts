@@ -29,7 +29,9 @@ function groupFor(name: string): string {
  * Compile-time search corpus — bundled from registry.json + catalog routes.
  * No server, no postbuild indexer.
  */
-export const searchIndex: SearchEntry[] = registry.items.map((item) => {
+export const searchIndex: SearchEntry[] = registry.items
+  .filter((item) => item.name !== "index")
+  .map((item) => {
   const kind = item.type === "registry:block" ? "block" : "component";
   return {
     name: item.name,
