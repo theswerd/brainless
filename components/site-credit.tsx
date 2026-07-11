@@ -1,34 +1,38 @@
-import { GrokThought } from "@/registry/brainless/grok/grok-thought";
+import { cn } from "@/lib/utils";
 
 /**
- * Homepage credit — a Grok thought that names who built brainless.
+ * Homepage credit — Grok-thought one-liner, theme-aware for the page chrome.
  */
-export function SiteCredit() {
+export function SiteCredit({ className }: { className?: string }) {
   return (
-    <section className="border-t border-border bg-[#1a1b26]">
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
-        <GrokThought elapsed="0.4s">
-          Built by{" "}
-          <a
-            href="https://x.com/benswerd"
-            target="_blank"
-            rel="noreferrer"
-            className="underline decoration-white/25 underline-offset-2 transition-colors hover:decoration-white/60"
-          >
-            @benswerd
-          </a>{" "}
-          and the{" "}
-          <a
-            href="https://freestyle.sh"
-            target="_blank"
-            rel="noreferrer"
-            className="underline decoration-white/25 underline-offset-2 transition-colors hover:decoration-white/60"
-          >
-            freestyle
-          </a>{" "}
-          team.
-        </GrokThought>
-      </div>
-    </section>
+    <p
+      className={cn(
+        "flex flex-wrap items-baseline gap-x-2 font-mono text-[12px] leading-snug text-muted-foreground",
+        className,
+      )}
+    >
+      <span aria-hidden className="text-muted-foreground/70">
+        ◆
+      </span>
+      <span>
+        <a
+          href="https://x.com/benswerd"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-current/25 underline-offset-2 transition-colors hover:text-foreground hover:decoration-current/50"
+        >
+          @benswerd
+        </a>
+        <span className="text-muted-foreground/50"> · </span>
+        <a
+          href="https://freestyle.sh"
+          target="_blank"
+          rel="noreferrer"
+          className="underline decoration-current/25 underline-offset-2 transition-colors hover:text-foreground hover:decoration-current/50"
+        >
+          freestyle
+        </a>
+      </span>
+    </p>
   );
 }
