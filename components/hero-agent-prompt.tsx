@@ -24,11 +24,11 @@ export function HeroAgentPrompt({ className }: { className?: string }) {
   }
 
   return (
-    <div className={cn("flex flex-wrap items-center gap-2", className)}>
+    <div className={cn("flex min-w-0 max-w-full flex-wrap items-center gap-2", className)}>
       <button
         type="button"
         onClick={copy}
-        className="inline-flex items-center gap-2 bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
+        className="inline-flex max-w-full items-center gap-2 bg-foreground px-4 py-2.5 text-sm font-medium text-background transition-opacity hover:opacity-90"
       >
         {copied ? <Check size={15} /> : <Copy size={15} />}
         {copied ? "Copied" : "Copy agent prompt"}

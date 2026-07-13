@@ -51,12 +51,12 @@ export function CodexPrompt({
       : model;
 
   return (
-    <div className={cn("font-mono text-[13px] leading-[1.6]", className)}>
+    <div className={cn("min-w-0 font-mono text-[13px] leading-[1.6]", className)}>
       <div
-        className="py-[1lh] pr-[1ch]"
+        className="min-w-0 py-[1lh] pr-[1ch]"
         style={{ background: INPUT_BG, color: FG }}
       >
-        <div className="flex items-center">
+        <div className="flex min-w-0 items-center">
           <span aria-hidden className="inline-block w-[2ch] shrink-0 font-bold">
             ›
           </span>
@@ -83,8 +83,8 @@ export function CodexPrompt({
         </div>
       </div>
 
-      <div className="flex flex-wrap items-baseline gap-x-3 pl-[2ch] text-[12px]">
-        <span>
+      <div className="flex min-w-0 flex-wrap items-baseline gap-x-3 pl-[2ch] text-[12px]">
+        <span className="min-w-0 break-words">
           <span style={{ color: MODEL }}>{displayModel}</span>
           <span style={{ color: DIM }}> · </span>
           <span style={{ color: CWD }}>{directory}</span>

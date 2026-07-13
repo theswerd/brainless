@@ -39,18 +39,18 @@ export function CodexExec({
     >
       <summary
         className={cn(
-          "flex list-none items-baseline gap-2 outline-none",
+          "flex min-w-0 list-none items-baseline gap-2 outline-none",
           expandable ? "cursor-pointer" : "cursor-default",
           "focus-visible:ring-1 focus-visible:ring-[#5cc2e0]/60",
         )}
       >
-        <span aria-hidden style={{ color: DOT[status] }}>
+        <span aria-hidden className="shrink-0" style={{ color: DOT[status] }}>
           •
         </span>
-        <span className="text-[#5cc2e0]">{command}</span>
-        {result ? <span className="text-[#7a7a7a]">{result}</span> : null}
+        <span className="min-w-0 break-words text-[#5cc2e0]">{command}</span>
+        {result ? <span className="shrink-0 text-[#7a7a7a]">{result}</span> : null}
         {expandable ? (
-          <span className="text-[#565656] group-open:hidden">▸</span>
+          <span className="shrink-0 text-[#565656] group-open:hidden">▸</span>
         ) : null}
       </summary>
       {expandable ? (

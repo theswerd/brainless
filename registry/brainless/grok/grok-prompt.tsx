@@ -64,12 +64,12 @@ export function GrokPrompt({
   const legend = modeLabel ? `${model} · ${modeLabel}` : model;
 
   return (
-    <div className={cn("font-mono text-[13px] leading-[1.5]", className)}>
+    <div className={cn("min-w-0 font-mono text-[13px] leading-[1.5]", className)}>
       <div
-        className="relative rounded-sm border px-2 py-1.5"
+        className="relative min-w-0 rounded-sm border px-2 py-1.5"
         style={{ borderColor: BORDER, background: SURFACE }}
       >
-        <div className="flex items-center gap-0">
+        <div className="flex min-w-0 items-center gap-0">
           <span
             aria-hidden
             className="shrink-0"
@@ -101,7 +101,7 @@ export function GrokPrompt({
 
         {/* legend punched into the bottom border */}
         <span
-          className="absolute -bottom-2.5 right-3 max-w-[min(100%,28rem)] truncate px-1 text-[12px]"
+          className="absolute -bottom-2.5 right-2 max-w-[calc(100%-1rem)] truncate px-1 text-[12px] sm:right-3"
           style={{ background: SURFACE, color: MUTED }}
           title={legend}
         >

@@ -50,11 +50,11 @@ export function ClaudeToolCall({
           "rounded-none outline-none focus-visible:ring-1 focus-visible:ring-[#7dcfff]/60",
         )}
       >
-        <span className="flex items-baseline gap-2">
-          <span aria-hidden style={{ color: STATUS_COLOR[status] }}>
+        <span className="flex min-w-0 items-baseline gap-2">
+          <span aria-hidden className="shrink-0" style={{ color: STATUS_COLOR[status] }}>
             ⏺
           </span>
-          <span>
+          <span className="min-w-0 break-words">
             <span className="text-[#c0caf5]">{tool}</span>
             {arg !== undefined ? (
               <>
@@ -65,16 +65,16 @@ export function ClaudeToolCall({
             ) : null}
           </span>
         </span>
-        <span className="flex items-baseline gap-2 text-[#8b8fa3]">
+        <span className="flex min-w-0 items-baseline gap-2 text-[#8b8fa3]">
           {/* invisible status glyph spacer: aligns ⎿ under the tool name */}
-          <span aria-hidden className="invisible">
+          <span aria-hidden className="invisible shrink-0">
             ⏺
           </span>
-          <span className="flex items-baseline gap-2">
-            <span aria-hidden className="text-[#565f89]">
+          <span className="flex min-w-0 items-baseline gap-2">
+            <span aria-hidden className="shrink-0 text-[#565f89]">
               ⎿
             </span>
-            <span>
+            <span className="min-w-0 break-words">
               {result}
               {expandable ? (
                 <span className="ml-2 text-[#565f89] group-open:hidden">

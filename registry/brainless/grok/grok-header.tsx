@@ -149,31 +149,33 @@ export function GrokHeader({
   return (
     <div
       className={cn(
-        "rounded-[6px] border border-[#2f2f33] px-4 py-4 font-mono text-[13px] leading-[1.5] text-[#e8e8e8]",
+        "min-w-0 rounded-[6px] border border-[#2f2f33] px-3 py-4 font-mono text-[13px] leading-[1.5] text-[#e8e8e8] sm:px-4",
         className,
       )}
     >
-      <div className="flex items-center gap-5">
+      <div className="flex min-w-0 items-center gap-5">
         <GrokLogo className="hidden shrink-0 sm:block" />
         <div className="min-w-0 flex-1">
-          <div>
+          <div className="break-words">
             <span className="font-semibold">Grok Build Beta</span>{" "}
             <span className="text-[#7a7a7a]">{version}</span>
           </div>
-          <div className="mt-2 font-semibold" style={{ color: AMBER }}>
+          <div className="mt-2 break-words font-semibold" style={{ color: AMBER }}>
             {headline}
           </div>
           <div className="truncate text-[#8b8b90]">{subhead}</div>
 
-          <ul className="mt-2.5 space-y-0.5">
+          <ul className="mt-2.5 min-w-0 space-y-0.5">
             {MENU.map((m) => (
               <li key={m.label}>
                 <button
                   type="button"
-                  className="flex w-full items-center justify-between gap-4 rounded px-1 py-0.5 text-left hover:bg-white/5"
+                  className="flex w-full min-w-0 items-center justify-between gap-4 rounded px-1 py-0.5 text-left hover:bg-white/5"
                 >
-                  <span>{m.label}</span>
-                  {m.key ? <span className="text-[#6a6a6a]">{m.key}</span> : null}
+                  <span className="min-w-0 truncate">{m.label}</span>
+                  {m.key ? (
+                    <span className="shrink-0 text-[#6a6a6a]">{m.key}</span>
+                  ) : null}
                 </button>
               </li>
             ))}

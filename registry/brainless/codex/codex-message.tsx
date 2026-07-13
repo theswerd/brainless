@@ -18,14 +18,14 @@ export function CodexMessage({
     return (
       <div
         className={cn(
-          "flex gap-2 font-mono text-[13px] leading-[1.6] text-[#ededed]",
+          "flex min-w-0 gap-2 font-mono text-[13px] leading-[1.6] text-[#ededed]",
           className,
         )}
       >
-        <span aria-hidden className="font-bold">
+        <span aria-hidden className="shrink-0 font-bold">
           ›
         </span>
-        <span className="min-w-0">{children}</span>
+        <span className="min-w-0 flex-1 break-words">{children}</span>
       </div>
     );
   }

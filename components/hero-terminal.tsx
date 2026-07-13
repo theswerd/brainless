@@ -56,9 +56,9 @@ export function HeroTerminal() {
   const [tab, setTab] = React.useState<TabId>("claude");
 
   return (
-    <div className="w-full overflow-hidden rounded-xl border border-white/10 bg-[#0d0d0f] shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)]">
+    <div className="w-full min-w-0 max-w-full overflow-hidden rounded-xl border border-white/10 bg-[#0d0d0f] shadow-[0_40px_120px_-30px_rgba(0,0,0,0.7)]">
       {/* title bar */}
-      <div className="flex items-center justify-between border-b border-white/5 px-4 py-3">
+      <div className="flex items-center justify-between border-b border-white/5 px-3 py-3 sm:px-4">
         <div className="flex gap-2" aria-hidden>
           <i className="size-3 rounded-full bg-[#ff5f57]" />
           <i className="size-3 rounded-full bg-[#febc2e]" />
@@ -90,13 +90,13 @@ export function HeroTerminal() {
       {/* the agent's header + session — all panels share one grid cell so the
           window height stays constant (tallest tab wins) and switching tabs
           doesn't jump the layout. */}
-      <div className="grid px-5 py-5 font-mono text-[13px] leading-[1.65]">
+      <div className="grid min-w-0 overflow-hidden px-3 py-4 font-mono text-[13px] leading-[1.65] sm:px-5 sm:py-5">
         {TABS.map((t) => (
           <div
             key={t.id}
             role="tabpanel"
             aria-hidden={t.id !== tab}
-            className="flex h-full flex-col gap-3 [grid-area:1/1]"
+            className="flex h-full min-w-0 flex-col gap-3 overflow-hidden break-words [grid-area:1/1]"
             style={{ visibility: t.id === tab ? "visible" : "hidden" }}
           >
             {t.id === "claude" ? <ClaudeSession /> : null}

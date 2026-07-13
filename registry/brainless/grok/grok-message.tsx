@@ -21,14 +21,14 @@ export function GrokMessage({
     return (
       <div
         className={cn(
-          "flex gap-2 font-mono text-[13px] leading-[1.6] text-[#e8e8e8]",
+          "flex min-w-0 gap-2 font-mono text-[13px] leading-[1.6] text-[#e8e8e8]",
           className,
         )}
       >
         <span aria-hidden className="shrink-0">
           ❯
         </span>
-        <span className="min-w-0 flex-1">{children}</span>
+        <span className="min-w-0 flex-1 break-words">{children}</span>
         {time ? (
           <span className="shrink-0 tabular-nums text-[#6c6c6c]">{time}</span>
         ) : null}
@@ -39,11 +39,11 @@ export function GrokMessage({
   return (
     <div
       className={cn(
-        "flex gap-2 font-mono text-[13px] leading-[1.6] text-[#cfcfd2]",
+        "flex min-w-0 gap-2 font-mono text-[13px] leading-[1.6] text-[#cfcfd2]",
         className,
       )}
     >
-      <span className="min-w-0 flex-1">{children}</span>
+      <span className="min-w-0 flex-1 break-words">{children}</span>
       {time ? (
         <span className="shrink-0 tabular-nums text-[#6c6c6c]">{time}</span>
       ) : null}

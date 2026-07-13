@@ -41,16 +41,16 @@ export function GrokWrite({
   return (
     <div
       className={cn(
-        "border-l-2 pl-3 font-mono text-[13px] leading-[1.55]",
+        "min-w-0 border-l-2 pl-3 font-mono text-[13px] leading-[1.55]",
         className,
       )}
       style={{ borderColor: BORDER }}
       role="region"
       aria-label="Write preview"
     >
-      <div className="space-y-0.5" style={{ color: MUTED }}>
+      <div className="min-w-0 space-y-0.5" style={{ color: MUTED }}>
         {before.map((l, i) => (
-          <div key={`b-${i}`} className="flex gap-2">
+          <div key={`b-${i}`} className="flex min-w-0 gap-2">
             <span
               aria-hidden
               className="w-4 shrink-0 select-none text-right tabular-nums"
@@ -59,11 +59,13 @@ export function GrokWrite({
               {l.n ?? ""}
             </span>
             <span className="sr-only">before: </span>
-            <span style={{ color: FG }}>{l.text}</span>
+            <span className="min-w-0 break-all" style={{ color: FG }}>
+              {l.text}
+            </span>
           </div>
         ))}
         {after.map((l, i) => (
-          <div key={`a-${i}`} className="flex gap-2">
+          <div key={`a-${i}`} className="flex min-w-0 gap-2">
             <span
               aria-hidden
               className="w-4 shrink-0 select-none text-right tabular-nums"
@@ -72,7 +74,9 @@ export function GrokWrite({
               {l.n ?? ""}
             </span>
             <span className="sr-only">after: </span>
-            <span style={{ color: FG }}>{l.text}</span>
+            <span className="min-w-0 break-all" style={{ color: FG }}>
+              {l.text}
+            </span>
           </div>
         ))}
       </div>

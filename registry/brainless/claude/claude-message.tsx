@@ -19,18 +19,18 @@ export function ClaudeMessage({
     return (
       <div
         className={cn(
-          "flex w-full items-baseline font-mono text-[13px] leading-[1.55]",
+          "flex w-full min-w-0 items-baseline font-mono text-[13px] leading-[1.55]",
           className,
         )}
         style={{ background: "#3a3a3a" }}
       >
-        <span aria-hidden style={{ color: "#4e4e4e" }}>
+        <span aria-hidden className="shrink-0" style={{ color: "#4e4e4e" }}>
           ❯
         </span>
         {/* one terminal cell between caret and text — a trailing space inside
             a flex child collapses, so use an explicit width */}
-        <span aria-hidden style={{ display: "inline-block", width: "1ch" }} />
-        <span className="min-w-0" style={{ color: "#ffffff" }}>
+        <span aria-hidden className="shrink-0" style={{ display: "inline-block", width: "1ch" }} />
+        <span className="min-w-0 flex-1 break-words" style={{ color: "#ffffff" }}>
           {children}
         </span>
       </div>

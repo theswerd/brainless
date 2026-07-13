@@ -39,26 +39,26 @@ export function GrokTool({
     return (
       <div
         className={cn(
-          "border-l-2 pl-3 font-mono text-[13px] leading-[1.55]",
+          "min-w-0 border-l-2 pl-3 font-mono text-[13px] leading-[1.55]",
           className,
         )}
         style={{ borderColor: GREEN }}
       >
-        <div className="flex flex-wrap items-baseline gap-x-2">
-          <span aria-hidden style={{ color: GREEN }}>
+        <div className="flex min-w-0 flex-wrap items-baseline gap-x-2">
+          <span aria-hidden className="shrink-0" style={{ color: GREEN }}>
             ◆
           </span>
-          <span className="font-semibold" style={{ color: SILVER }}>
+          <span className="min-w-0 break-words font-semibold" style={{ color: SILVER }}>
             {heading}
           </span>
           {hooks != null ? (
-            <span style={{ color: DIM }}>
+            <span className="shrink-0" style={{ color: DIM }}>
               [hooks: <span style={{ color: GREEN }}>{hooks}</span>]
             </span>
           ) : null}
         </div>
         {children ? (
-          <div className="mt-1" style={{ color: MUTED }}>
+          <div className="mt-1 min-w-0 break-words" style={{ color: MUTED }}>
             {children}
           </div>
         ) : null}
@@ -69,12 +69,16 @@ export function GrokTool({
   return (
     <div
       className={cn(
-        "flex items-baseline gap-2 font-mono text-[13px] leading-[1.6] text-[#8b8b90]",
+        "flex min-w-0 flex-wrap items-baseline gap-2 font-mono text-[13px] leading-[1.6] text-[#8b8b90]",
         className,
       )}
     >
-      {verb ? <span>{verb}</span> : null}
-      {path ? <span style={{ color: BLUE }}>{path}</span> : null}
+      {verb ? <span className="shrink-0">{verb}</span> : null}
+      {path ? (
+        <span className="min-w-0 break-all" style={{ color: BLUE }}>
+          {path}
+        </span>
+      ) : null}
       {meta ? <span className="text-[#6a6a6a]">{meta}</span> : null}
       {children}
     </div>

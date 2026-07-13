@@ -44,13 +44,13 @@ export function GrokStatus({
   return (
     <div
       className={cn(
-        "flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1 font-mono text-[12px]",
+        "flex min-w-0 flex-wrap items-baseline justify-between gap-x-4 gap-y-1 font-mono text-[12px]",
         className,
       )}
       role="status"
       aria-label="Session status"
     >
-      <div className="min-w-0 truncate" style={{ color: MUTED }}>
+      <div className="min-w-0 max-w-full truncate" style={{ color: MUTED }}>
         <span aria-hidden style={{ color: FG }}>
           {" "}
         </span>
@@ -60,7 +60,7 @@ export function GrokStatus({
       </div>
 
       <div
-        className="flex shrink-0 flex-wrap items-baseline gap-x-2 tabular-nums"
+        className="flex min-w-0 flex-wrap items-baseline gap-x-2 tabular-nums"
         style={{ color: MUTED }}
       >
         {showMcp ? (

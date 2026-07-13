@@ -26,30 +26,32 @@ export function ClaudeDiff({
   className?: string;
 }) {
   return (
-    <div className={cn("font-mono text-[13px] leading-[1.55]", className)}>
-      <div className="flex items-baseline gap-2">
-        <span aria-hidden style={{ color: GREEN }}>
+    <div className={cn("min-w-0 font-mono text-[13px] leading-[1.55]", className)}>
+      <div className="flex min-w-0 flex-wrap items-baseline gap-x-2">
+        <span aria-hidden className="shrink-0" style={{ color: GREEN }}>
           ⏺
         </span>
         <span className="text-[#c0caf5]">Update</span>
-        <span className="text-[#565f89]">(</span>
-        <span className="text-[#7dcfff]">{file}</span>
-        <span className="text-[#565f89]">)</span>
+        <span className="min-w-0 break-all">
+          <span className="text-[#565f89]">(</span>
+          <span className="text-[#7dcfff]">{file}</span>
+          <span className="text-[#565f89]">)</span>
+        </span>
       </div>
       {summary ? (
-        <div className="flex items-baseline gap-2 text-[#8b8fa3]">
+        <div className="flex min-w-0 items-baseline gap-2 text-[#8b8fa3]">
           {/* invisible status glyph spacer: aligns ⎿ under "Update" */}
-          <span aria-hidden className="invisible">
+          <span aria-hidden className="invisible shrink-0">
             ⏺
           </span>
-          <span aria-hidden style={{ color: "#565f89" }}>
+          <span aria-hidden className="shrink-0" style={{ color: "#565f89" }}>
             ⎿
           </span>
-          <span>{summary}</span>
+          <span className="min-w-0 break-words">{summary}</span>
         </div>
       ) : null}
 
-      <pre className="mt-1 overflow-x-auto rounded-none border border-[#202022] bg-[#101010] py-1.5 pl-2 pr-3">
+      <pre className="mt-1 min-w-0 overflow-x-auto rounded-none border border-[#202022] bg-[#101010] py-1.5 pl-2 pr-3">
         {lines.map((l, i) => {
           const bg =
             l.type === "add"
@@ -61,7 +63,7 @@ export function ClaudeDiff({
           const markColor =
             l.type === "add" ? GREEN : l.type === "del" ? "#f7768e" : "#565f89";
           return (
-            <div key={i} className="flex" style={{ background: bg }}>
+            <div key={i} className="flex min-w-0" style={{ background: bg }}>
               <span
                 className="w-9 shrink-0 select-none pr-2 text-right"
                 style={{ color: "#3b3f52" }}
@@ -72,6 +74,7 @@ export function ClaudeDiff({
                 {mark}
               </span>
               <span
+                className="min-w-0 break-all"
                 style={{
                   color: l.type === "ctx" ? "#8b8fa3" : "#c0caf5",
                 }}

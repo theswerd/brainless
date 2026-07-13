@@ -91,21 +91,21 @@ export function ClaudeHeader({
   return (
     <fieldset
       className={cn(
-        "rounded-[6px] border px-4 pb-3.5 pt-1 font-mono text-[13px] leading-[1.5] text-[#c0caf5]",
+        "min-w-0 rounded-[6px] border px-3 pb-3.5 pt-1 font-mono text-[13px] leading-[1.5] text-[#c0caf5] sm:px-4",
         className,
       )}
       style={{ borderColor: ROSE }}
     >
-      <legend className="px-2" style={{ color: ROSE }}>
+      <legend className="max-w-full truncate px-2" style={{ color: ROSE }}>
         Claude Code <span style={{ color: GRAY }}>{version}</span>
       </legend>
 
-      <div className="grid gap-4 sm:grid-cols-[1fr_1px_1.1fr]">
+      <div className="grid min-w-0 gap-4 sm:grid-cols-[minmax(0,1fr)_1px_minmax(0,1.1fr)]">
         {/* left: identity */}
-        <div className="flex flex-col items-center gap-2 py-1 text-center">
+        <div className="flex min-w-0 flex-col items-center gap-2 py-1 text-center">
           <div className="font-semibold">Welcome back {user}!</div>
           <ClaudeLogo className="my-1.5" />
-          <div className="space-y-0.5" style={{ color: GRAY }}>
+          <div className="min-w-0 space-y-0.5 break-words" style={{ color: GRAY }}>
             <div>{model}</div>
             <div>{org}</div>
             <div>{cwd}</div>
