@@ -13,6 +13,7 @@ export function ThemeToggle() {
       type="button"
       variant="ghost"
       size="icon-sm"
+      className="hidden sm:inline-flex"
       aria-label={isDark ? "Switch to light mode" : "Switch to dark mode"}
       onClick={() => setTheme(isDark ? "light" : "dark")}
     >

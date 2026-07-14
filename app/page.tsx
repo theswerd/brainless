@@ -2,6 +2,7 @@ import { HeroTerminal } from "@/components/hero-terminal";
 import { BlankMind } from "@/components/hero-backdrops";
 import { HeroAgentPrompt } from "@/components/hero-agent-prompt";
 import { SiteCredit } from "@/components/site-credit";
+import { UsedBy } from "@/components/used-by";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
           </p>
 
           <HeroAgentPrompt className="pt-2" />
+
+          <UsedBy className="pt-4" />
 
           <SiteCredit className="mt-auto" />
         </div>
